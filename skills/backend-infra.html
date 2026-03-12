@@ -30,19 +30,31 @@
         </nav>
 
         <h1 class="text-3xl font-bold mb-6">Backend Systems & Data Infrastructure</h1>
-        <p class="mb-4">Tools and practices I use to build scalable services and manage data.</p>
+        <p class="mb-4">Here I break down the core backend technologies I build with and describe the typical lifecycle of services and data systems I’ve developed.</p>
 
         <h2 class="text-2xl font-semibold mt-6">FastAPI, Flask, REST API design</h2>
-        <p>I develop web services with Python frameworks such as FastAPI and Flask. Design focuses on clear endpoint contracts, validation, and documentation (OpenAPI).</p>
+        <p>When creating microservices or APIs, I usually start with FastAPI for its async support and automatic documentation. Flask is useful for simpler services or quick prototypes.</p>
+        <p>**Real world example:** the backend inventory system exposes endpoints for CRUD operations on products and orders, complete with Pydantic models for request validation and OAuth2 for authentication.</p>
+        <p>Workflow details:
+            <ul class="list-disc ml-6">
+                <li>Define Pydantic schemas and routers.</li>
+                <li>Use dependency injection for database sessions and config.</li>
+                <li>Generate OpenAPI docs and test endpoints with Swagger UI.</li>
+                <li>Deploy as Docker containers behind a reverse proxy like Nginx.</li>
+            </ul>
+        </p>
 
         <h2 class="text-2xl font-semibold mt-6">Async programming & service architecture</h2>
-        <p>Async patterns (async/await) let services handle many requests concurrently. I also structure applications into layers (handlers, services, repositories) for maintainability.</p>
+        <p>Asynchronous code lets a single process handle many IO-bound operations. I commonly structure projects into layers: API layer, business logic/services, and repositories/data access.</p>
+        <p>**Use case:** a submission judge that processes user code concurrently while interacting with a database and external sandbox. Async tasks and queues (e.g., Celery) keep the system responsive under load.</p>
 
         <h2 class="text-2xl font-semibold mt-6">PostgreSQL, schema design, query optimization</h2>
-        <p>Relational databases are the backbone of many applications. I create normalized schemas, write indexes, and analyze query plans to keep performance high.</p>
+        <p>For persistent storage I favor PostgreSQL. Good schema design and indexes are essential for fast queries, especially when joining multiple tables.</p>
+        <p>Example workflow: write migrations using Alembic, seed reference data, benchmark slow queries with EXPLAIN ANALYZE, and add partial or expression indexes where necessary. Regular vacuuming and maintenance scripts are scheduled.</p>
 
         <h2 class="text-2xl font-semibold mt-6">Vector DBs (Chroma, Pinecone), embedding pipelines</h2>
-        <p>For semantic search and RAG systems I use vector databases. The workflow involves generating embeddings from text, storing them, and retrieving nearest neighbors during query time.</p>
+        <p>In AI projects, I store semantic embeddings in vector databases. Text is converted to vectors using an embedding model, then inserted into Chroma or Pinecone for efficient nearest‑neighbor search.</p>
+        <p>The operational flow includes preprocessing documents, batching embedding requests, storing vectors with metadata, and handling incremental updates when content changes. During queries, retrieved passages are merged into prompts for RAG workflows.</p>
 
         <footer class="mt-16 text-sm text-gray-500">
             &copy; 2026 Jackie Zou. All rights reserved.

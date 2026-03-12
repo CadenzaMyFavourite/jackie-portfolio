@@ -30,16 +30,21 @@
         </nav>
 
         <h1 class="text-3xl font-bold mb-6">Front-end & UI Frameworks</h1>
-        <p class="mb-4">Frameworks and libraries I use to accelerate development and maintain visual consistency.</p>
+        <p class="mb-4">This page describes the UI frameworks I rely on and how they shape the structure and appearance of my applications.</p>
 
         <h2 class="text-2xl font-semibold mt-6">TailwindCSS</h2>
-        <p>Utility-first CSS framework that makes styling fast and responsive without writing custom CSS. I use it across all web pages for consistent design.</p>
+        <p>Tailwind’s utility classes let me build responsive layouts quickly without leaving HTML. Instead of writing custom CSS, I compose classes for spacing, typography, colors, and responsive behavior.</p>
+        <p>**Example:** the entire portfolio site uses Tailwind for layout and theming; dark mode toggling is managed with a single `dark` class on the `<html>` element.</p>
+        <p>Workflow: configure `tailwind.config.js` with custom colors or fonts, use `@apply` for shared styles, and purge unused classes during build to keep CSS small.
+        </p>
 
         <h2 class="text-2xl font-semibold mt-6">PySide6</h2>
-        <p>Python bindings for Qt used in desktop GUI projects. Good for building tools with native look and feel when a web interface isn’t suitable.</p>
+        <p>For Python desktop tools, PySide6 provides access to Qt’s widgets and graphics. It’s great for internal tooling where a local GUI is more convenient than a web app.</p>
+        <p>Typical project flow: design UI with Qt Designer, generate Python bindings, and implement business logic in separate modules. Packaging with PyInstaller creates stand‑alone executables.</p>
 
         <h2 class="text-2xl font-semibold mt-6">React (future)</h2>
-        <p>Planning to adopt React for interactive frontends. Its component model and ecosystem make complex UI state easier to manage.</p>
+        <p>React is on my roadmap for more dynamic frontends. Its component-based architecture and hooks simplify state management compared to vanilla JavaScript.</p>
+        <p>I plan to use Create React App or Vite to bootstrap new projects and integrate TypeScript for type safety. This will enable richer interactivity in dashboards and admin panels.</p>
 
         <footer class="mt-16 text-sm text-gray-500">
             &copy; 2026 Jackie Zou. All rights reserved.

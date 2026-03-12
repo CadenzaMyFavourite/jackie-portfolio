@@ -32,22 +32,40 @@
         </nav>
 
         <h1 class="text-3xl font-bold mb-6">Programming Languages & Concepts</h1>
-        <p class="mb-4">This page covers the core programming languages I work with and how they are applied in real projects.</p>
+        <p class="mb-4">This page dives deeper into the foundational languages and paradigms I use day‑to‑day. Each section below describes practical applications, typical development workflows, and real‑world scenarios where the language plays a critical role.</p>
+
         <h2 class="text-2xl font-semibold mt-6">Python (Advanced)</h2>
-        <p>Python is my go-to language for rapid prototyping, data processing, scripting, and backend services. In production I use it for web APIs (FastAPI/Flask), automation pipelines, and machine learning tasks.</p>
-        <p>Typical workflow: write code in modules, use virtual environments, write unit tests with pytest, and deploy via Docker/CI.</p>
+        <p>Python is my primary language for most projects. Its rich standard library and ecosystem make it ideal for everything from quick automation scripts to full‑scale backend services and data science work.</p>
+        <p>**Real use case:** Building a FastAPI service for an AI consulting platform where incoming user data is validated, processed, and stored. The same project leverages pandas for preprocessing datasets and scikit‑learn for model prototyping.</p>
+        <p>**Typical workflow:**
+            <ul class="list-disc ml-6">
+                <li>Create and activate a virtual environment (`venv` or `conda`).</li>
+                <li>Structure code into modules/packages with clear interfaces.</li>
+                <li>Write unit tests using pytest and run them automatically in CI pipelines.</li>
+                <li>Containerize with Docker, publish images, and deploy to cloud (e.g., Azure App Service).</li>
+                <li>Monitor performance and iterate based on logs/metrics.</li>
+            </ul>
+        </p>
 
         <h2 class="text-2xl font-semibold mt-6">TypeScript</h2>
-        <p>TypeScript adds static typing to JavaScript and is used when building web frontends or serverless functions. It helps catch errors early and improves code maintainability.</p>
+        <p>TypeScript brings compile‑time safety to JavaScript and is indispensable for frontend work and any Node.js backends. I use it to build responsive UIs and serverless functions where type errors would otherwise surface in production.</p>
+        <p>**Real use case:** Developing a dashboard with React where TypeScript enforces prop types and API contract shapes, reducing runtime bugs during rapid UI iterations.</p>
+        <p>**Workflow highlights:** configure `tsconfig.json`, use ESLint/Prettier for style, compile to JS, and integrate with bundlers like Vite or Webpack. Strong typing simplifies refactors and makes large codebases maintainable.</p>
 
         <h2 class="text-2xl font-semibold mt-6">Java</h2>
-        <p>Java is valuable for backend systems requiring strong typing and performance. I’ve used it for designing object‑oriented services and interfacing with relational databases.</p>
+        <p>Java is often the choice for enterprise backend systems, microservices, or academic projects requiring strict typing and long‑running stability. Its JVM ecosystem offers mature libraries and tooling.</p>
+        <p>**Real use case:** A university project implementing an inventory system with Spring Boot, exposing REST APIs and ensuring transactional integrity with Hibernate/JPA.</p>
+        <p>**Workflow:** design domain models, write JUnit tests, use Maven/Gradle for dependency management, and deploy WAR/JAR files to application servers or containers. Profiling and garbage‑collection tuning help maintain performance.</p>
 
         <h2 class="text-2xl font-semibold mt-6">C++</h2>
-        <p>C++ skills come in handy for systems programming, algorithm contests, or performance‑sensitive modules. I use it for custom data structures and low‑level tasks.</p>
+        <p>C++ comes into play when performance is critical or for systems‑level work. It’s also my go‑to for coding competitions and algorithm library implementations.</p>
+        <p>**Real use case:** Implementing custom memory‑efficient data structures for a high‑throughput simulator or participating in ICPC‑style contests where execution speed matters.</p>
+        <p>**Workflow:** develop with modern C++ (17/20), use `make` or CMake, write comprehensive tests, and profile with tools like Valgrind or Visual Studio’s performance analyzers. Manual memory management and RAII patterns are central.</p>
 
         <h2 class="text-2xl font-semibold mt-6">SQL</h2>
-        <p>SQL is essential for querying and manipulating relational data. I write complex joins, optimize queries, and design normalized schemas to support applications.</p>
+        <p>SQL is the language for storing, querying, and transforming relational data. Good SQL skills make the difference between a sluggish app and a responsive one.</p>
+        <p>**Real use case:** Designing a PostgreSQL schema for an e‑commerce platform, writing optimized JOINs for sales reports, and adding indexes to improve query latency.</p>
+        <p>**Workflow:** draft ER diagrams, normalize tables, write migrations, use EXPLAIN ANALYZE to tune queries, and incorporate SQL scripts within application code using ORMs or query builders.</p>
 
         <footer class="mt-16 text-sm text-gray-500">
             &copy; 2026 Jackie Zou. All rights reserved.

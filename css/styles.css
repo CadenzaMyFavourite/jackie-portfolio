@@ -37,7 +37,7 @@ body {
 /* dark mode support (optional) */
 .dark body {
     background-color: #1a202c;
-    color: #e2e8f0;
+    color: #ffffff; /* use white text for better contrast */
 }
 .dark nav {
     background-color: #2d3748;
