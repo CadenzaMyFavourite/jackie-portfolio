@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Programming Skills | Jackie Zou</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="text-gray-900 antialiased min-h-screen flex flex-col items-center p-6 sm:p-12">
+    <div class="w-full max-w-4xl">
+        <nav class="sticky top-0 bg-white z-50 flex justify-between items-center mb-12 shadow-sm">
+            <div class="text-xl font-bold tracking-tight cursor-pointer" onclick="location.href='../index.html'">Jackie Zou</div>
+            <!-- hamburger for mobile -->
+            <button id="nav-toggle" class="sm:hidden focus:outline-none">
+                <!-- simple bars icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div id="nav-links" class="hidden sm:flex space-x-6 text-sm font-medium text-gray-500">
+                <a href="../index.html#home" data-section="hero" class="nav-link hover:text-blue-600 transition-colors">Home</a>
+                <a href="../index.html#projects" data-section="projects" class="nav-link hover:text-blue-600 transition-colors">Projects</a>
+                <a href="../index.html#skills" data-section="skills" class="nav-link hover:text-blue-600 transition-colors">Skills</a>
+                <a href="../index.html#about" data-section="about" class="nav-link hover:text-blue-600 transition-colors">About</a>
+                <a href="../index.html#awards" data-section="awards" class="nav-link hover:text-blue-600 transition-colors">Awards</a>
+                <a href="../index.html#resume" data-section="resume" class="nav-link hover:text-blue-600 transition-colors">Resume</a>
+                <a href="../index.html#contact" data-section="contact" class="nav-link hover:text-blue-600 transition-colors">Contact</a>
+                <button id="theme-toggle" title="Toggle dark mode" class="ml-4 text-lg">🌙</button>
+            </div>
+        </nav>
+
+        <h1 class="text-3xl font-bold mb-6">Programming Languages & Concepts</h1>
+        <p class="mb-4">This page covers the core programming languages I work with and how they are applied in real projects.</p>
+        <h2 class="text-2xl font-semibold mt-6">Python (Advanced)</h2>
+        <p>Python is my go-to language for rapid prototyping, data processing, scripting, and backend services. In production I use it for web APIs (FastAPI/Flask), automation pipelines, and machine learning tasks.</p>
+        <p>Typical workflow: write code in modules, use virtual environments, write unit tests with pytest, and deploy via Docker/CI.</p>
+
+        <h2 class="text-2xl font-semibold mt-6">TypeScript</h2>
+        <p>TypeScript adds static typing to JavaScript and is used when building web frontends or serverless functions. It helps catch errors early and improves code maintainability.</p>
+
+        <h2 class="text-2xl font-semibold mt-6">Java</h2>
+        <p>Java is valuable for backend systems requiring strong typing and performance. I’ve used it for designing object‑oriented services and interfacing with relational databases.</p>
+
+        <h2 class="text-2xl font-semibold mt-6">C++</h2>
+        <p>C++ skills come in handy for systems programming, algorithm contests, or performance‑sensitive modules. I use it for custom data structures and low‑level tasks.</p>
+
+        <h2 class="text-2xl font-semibold mt-6">SQL</h2>
+        <p>SQL is essential for querying and manipulating relational data. I write complex joins, optimize queries, and design normalized schemas to support applications.</p>
+
+        <footer class="mt-16 text-sm text-gray-500">
+            &copy; 2026 Jackie Zou. All rights reserved.
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
