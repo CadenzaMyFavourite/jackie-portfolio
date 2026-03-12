@@ -16,10 +16,7 @@
     <div class="w-full max-w-4xl">
 
         <nav class="sticky top-0 bg-white z-50 flex justify-between items-center mb-12 shadow-sm">
-            <div class="flex items-center cursor-pointer" onclick="showSection('hero')">
-                <img src="assets/profile.jpg" alt="Profile" class="w-10 h-10 rounded-full mr-2" />
-                <span class="text-xl font-bold tracking-tight">Jackie Zou</span>
-            </div>
+            <div class="text-xl font-bold tracking-tight cursor-pointer" onclick="showSection('hero')">Jackie Zou</div>
             <!-- hamburger for mobile -->
             <button id="nav-toggle" class="sm:hidden focus:outline-none">
                 <!-- simple bars icon -->
@@ -39,6 +36,10 @@
             </div>
         </nav>
 
+        <!-- large profile image above sections -->
+        <div class="mb-8 flex justify-start">
+            <img src="assets/profile.jpg" alt="Jackie Zou" class="w-48 h-48 rounded-full object-cover" />
+        </div>
         <section id="hero" class="page-section block transition-opacity duration-300 reveal" data-aos="fade-up">
             <!-- navigation blocks grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
