@@ -55,7 +55,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6M3 7h18M3 17h18" />
                     </svg>
                     <h3 class="text-3xl font-bold mb-2">Projects</h3>
-                    <p class="text-gray-600">Explore software projects including AI tools and probability engines.</p>
+                    <p class="text-gray-600">Explore backend systems, AI platforms, automated judges, ML pipelines, and research.</p>
                 </div>
                 <!-- Skills block -->
                 <div onclick="showSection('skills')" class="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out">
@@ -73,7 +73,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3.866 0-7 3.134-7 7a7 7 0 0014 0c0-3.866-3.134-7-7-7zm0-3v4" />
                     </svg>
                     <h3 class="text-3xl font-bold mb-2">Awards</h3>
-                    <p class="text-gray-600">See recognitions and honors earned.</p>
+                    <p class="text-gray-600">See contest results, honours, and academic awards.</p>
                 </div>
                 <!-- Resume block -->
                 <div onclick="showSection('resume')" class="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out">
@@ -101,45 +101,69 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> <!-- animate each card -->
                 <!-- Project card 1 -->
                 <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up">
-                    <h3 class="text-lg font-semibold mb-2">Backend Inventory System</h3>
+                    <h3 class="text-lg font-semibold mb-2">Backend Inventory Management System</h3>
                     <ul class="list-disc ml-5 text-gray-600 mb-4">
-                        <li>OO design of services for inventory, orders, users.</li>
-                        <li>REST APIs with SQL transactional consistency & edge-case handling.</li>
+                        <li>Designed and implemented backend services using OO principles and layered architecture.</li>
+                        <li>Built RESTful APIs to manage inventory, orders, and user data with transactional guarantees.</li>
+                        <li>Integrated relational databases; debugged and optimized edge‑case/concurrent logic.</li>
                     </ul>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 bg-gray-200 text-xs rounded">Java</span>
                         <span class="px-2 py-1 bg-gray-200 text-xs rounded">SQL</span>
                     </div>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/CadenzaMyFavourite/inventory-backend" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
-                    </div>
                 </div>
                 <!-- Project card 2 -->
                 <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-lg font-semibold mb-2">AI Consulting Platform</h3>
+                    <h3 class="text-lg font-semibold mb-2">AI Consulting Platform – Business Intelligence</h3>
                     <ul class="list-disc ml-5 text-gray-600 mb-4">
-                        <li>FastAPI service converting business data into strategic insights.</li>
-                        <li>Streamlit dashboards and extensible multi-client architecture.</li>
-                        <li>Data cleaning, feature extraction, automated strategy pipelines.</li>
+                        <li>Built end-to-end AI platform turning raw data into growth strategies.</li>
+                        <li>Automated data cleaning, feature extraction, and strategy generation pipelines.</li>
+                        <li>Interactive Streamlit dashboard for non‑technical users; extensible architecture.</li>
                     </ul>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
                         <span class="px-2 py-1 bg-gray-200 text-xs rounded">FastAPI</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Streamlit</span>
                         <span class="px-2 py-1 bg-gray-200 text-xs rounded">Qwen LLM</span>
                     </div>
                 </div>
                 <!-- Project card 3 -->
                 <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-lg font-semibold mb-2">Stock Market Prediction</h3>
+                    <h3 class="text-lg font-semibold mb-2">Automated Code Evaluation Platform</h3>
                     <ul class="list-disc ml-5 text-gray-600 mb-4">
-                        <li>Full ML pipeline predicting S&P500 outperformance.</li>
-                        <li>Data ingestion from Yahoo Finance, feature engineering, backtesting.</li>
-                        <li>Random Forest models trained in pandas/scikit-learn.</li>
+                        <li>Scalable backend for processing and judging code submissions.</li>
+                        <li>Deterministic execution and validation ensuring fairness and reliability.</li>
+                        <li>Implemented persistent storage, access control, and concurrency handling.</li>
                     </ul>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
-                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">scikit-learn</span>
+                    </div>
+                </div>
+                <!-- Project card 4 -->
+                <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg font-semibold mb-2">Stock Market Outperformance Predictor</h3>
+                    <ul class="list-disc ml-5 text-gray-600 mb-4">
+                        <li>Developed ML pipeline to forecast stocks beating the S&amp;P500.</li>
+                        <li>Ingested/cleaned Yahoo Finance data; engineered financial features via regex parsers.</li>
+                        <li>Trained & validated Random Forest classifier with backtesting.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Java</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
                         <span class="px-2 py-1 bg-gray-200 text-xs rounded">Pandas</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">scikit-learn</span>
+                    </div>
+                </div>
+                <!-- Project card 5 -->
+                <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-lg font-semibold mb-2">Research: Cognitive Biases in LLMs</h3>
+                    <ul class="list-disc ml-5 text-gray-600 mb-4">
+                        <li>Built experimental pipelines to probe model consistency under repeated runs.</li>
+                        <li>Analyzed robustness of outputs; documented implications for production reliability.</li>
+                        <li>Developed reproducible Python systems for data analysis at UW.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
                     </div>
                 </div>
             </div>
@@ -190,9 +214,8 @@
         <section id="awards" class="page-section hidden transition-opacity duration-300 reveal">
             <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Awards & Recognition</h2>
             <ul class="list-disc ml-5 text-gray-700 space-y-2">
-                <li>Dean's List, University of Waterloo (2023)</li>
-                <li>UW Computing Excellence Award</li>
-                <li>First place – Hackathon XYZ (2022)</li>
+                <li>Canadian Open Mathematics Challenge (COMC) 2024 – Honourable Mention; Best in Grade 12 (Central Toronto); score: 66</li>
+                <li>Euclid Mathematics Contest 2025 – School Champion; Honour Roll; score: 91/100</li>
             </ul>
         </section>
         

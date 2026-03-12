@@ -9,7 +9,7 @@ This repository contains a polished single-page developer portfolio for Jackie Z
 
 ## Features implemented
 
-1. **Homepage dashboard**: large grid‑based blocks that navigate to sections. Each tile (About, Projects, Skills, Resume, Contact) features a title, subtitle, hover lift animation, subtle color highlight, and an icon; responsive 3‑column layout on desktop, 2 on tablet and 1 on mobile. Tiles scale slightly on hover with a 300ms transition.2. **Projects section**: three‑column grid of static cards; each card lifts on hover and fades in on scroll. Hover shadows and gradient tag colors provide soft visuals.
+1. **Homepage dashboard**: large grid‑based blocks that navigate to sections. Each tile (About, Projects, Skills, Resume, Contact) features a title, subtitle, hover lift animation, subtle color highlight, and an icon; responsive 3‑column layout on desktop, 2 on tablet and 1 on mobile. Tiles scale slightly on hover with a 300ms transition.2. **Projects section**: multi‑card grid showcasing backend systems, AI platforms, automated evaluation tools, stock predictors, and research. Cards include bullet lists of responsibilities, technology tags, and fade‑up animations with staggered delays.
 3. **Skills section** grouped into Programming, AI Systems, Backend & Data Infra, and Frameworks with gradient heading text.
 4. **About section** describing interests in AI, cognitive science and complex systems with scroll‑reveal animation.
 5. **Resume section** embedding a PDF viewer along with a download button.
@@ -29,7 +29,7 @@ This repository contains a polished single-page developer portfolio for Jackie Z
 - Add screenshots / demo links to the project cards in `js/github.js` (or augment with custom data).
 - Consider including GitHub stats widgets (e.g. [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)).
 - Enable dark mode toggler in `js/main.js` if desired.
-- Host live demos for key projects on Vercel/Netlify and link them.
+- Host live demos or GitHub repo links for key projects; project cards already include descriptions and tags.
 
 ## Deployment
 
@@ -51,7 +51,8 @@ This repository contains a polished single-page developer portfolio for Jackie Z
 ## Next steps / upgrades
 
 - Migrate to a framework like Next.js/React/Stucco for reusable components.
-- Add a projects JSON file or more sophisticated CMS if not all repos should appear.
+- Awards section now lists academic contest results with scores (COMC, Euclid); update as new recognitions arrive.
+- Add a projects JSON file or more sophisticated CMS if you want dynamic updates beyond static cards.
 - Implement animations (AOS, Framer Motion) and dark-mode toggle for polish.
 - Write a small script to deploy the resume PDF to `assets/` automatically.
 
