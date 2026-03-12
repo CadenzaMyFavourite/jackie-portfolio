@@ -10,7 +10,7 @@ This repository contains a polished single-page developer portfolio for Jackie Z
 ## Features implemented
 
 1. **Homepage dashboard**: large grid‑based blocks that navigate to sections. Each tile (About, Projects, Skills, Resume, Contact) features a title, subtitle, hover lift animation, subtle color highlight, and an icon; responsive 3‑column layout on desktop, 2 on tablet and 1 on mobile. Tiles scale slightly on hover with a 300ms transition.2. **Projects section**: three‑column grid of static cards; each card lifts on hover and fades in on scroll. Hover shadows and gradient tag colors provide soft visuals.
-3. **Skills section** grouped into Languages, AI/Data, Systems and Frameworks with gradient heading text.
+3. **Skills section** grouped into Programming, AI Systems, Backend & Data Infra, and Frameworks with gradient heading text.
 4. **About section** describing interests in AI, cognitive science and complex systems with scroll‑reveal animation.
 5. **Resume section** embedding a PDF viewer along with a download button.
 6. **Contact section** with email and social links; gradient heading included.
@@ -21,6 +21,7 @@ This repository contains a polished single-page developer portfolio for Jackie Z
 10. **Animated scroll effects** via AOS – hero fades in, project cards slide up, skill cards appear sequentially.
 11. **Multiple resume versions** selectable on the resume page.
 12. **Interactive skills**: hover over skill tiles to see them roll.
+13. **Awards section**: new section listing academic honours and recognitions.
 
 
 ## Making it recruiter‑ready

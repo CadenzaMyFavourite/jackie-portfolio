@@ -29,6 +29,7 @@
                 <a href="#projects" data-section="projects" onclick="showSection('projects')" class="nav-link hover:text-blue-600 transition-colors">Projects</a>
                 <a href="#skills" data-section="skills" onclick="showSection('skills')" class="nav-link hover:text-blue-600 transition-colors">Skills</a>
                 <a href="#about" data-section="about" onclick="showSection('about')" class="nav-link hover:text-blue-600 transition-colors">About</a>
+                <a href="#awards" data-section="awards" onclick="showSection('awards')" class="nav-link hover:text-blue-600 transition-colors">Awards</a>
                 <a href="#resume" data-section="resume" onclick="showSection('resume')" class="nav-link hover:text-blue-600 transition-colors">Resume</a>
                 <a href="#contact" data-section="contact" onclick="showSection('contact')" class="nav-link hover:text-blue-600 transition-colors">Contact</a>
                 <button id="theme-toggle" title="Toggle dark mode" class="ml-4 text-lg">🌙</button>
@@ -65,6 +66,15 @@
                     <h3 class="text-3xl font-bold mb-2">Skills</h3>
                     <p class="text-gray-600">View my technical skill set and competencies.</p>
                 </div>
+                <!-- Awards block -->
+                <div onclick="showSection('awards')" class="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out">
+                    <!-- awards icon -->
+                    <svg class="w-10 h-10 mb-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3.866 0-7 3.134-7 7a7 7 0 0014 0c0-3.866-3.134-7-7-7zm0-3v4" />
+                    </svg>
+                    <h3 class="text-3xl font-bold mb-2">Awards</h3>
+                    <p class="text-gray-600">See recognitions and honors earned.</p>
+                </div>
                 <!-- Resume block -->
                 <div onclick="showSection('resume')" class="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out">
                     <!-- resume icon -->
@@ -91,44 +101,45 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> <!-- animate each card -->
                 <!-- Project card 1 -->
                 <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up">
-                    <h3 class="text-lg font-semibold mb-2">AI Consulting Tool</h3>
-                    <p class="text-gray-600 mb-4">LLM‑powered decision assistant built with Qwen models.</p>
+                    <h3 class="text-lg font-semibold mb-2">Backend Inventory System</h3>
+                    <ul class="list-disc ml-5 text-gray-600 mb-4">
+                        <li>OO design of services for inventory, orders, users.</li>
+                        <li>REST APIs with SQL transactional consistency & edge-case handling.</li>
+                    </ul>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
-                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">LLM</span>
-                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">API</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Java</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">SQL</span>
                     </div>
                     <div class="flex space-x-4">
-                        <a href="https://github.com/CadenzaMyFavourite/ai-tool" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://demo.example.com" target="_blank" class="text-blue-600 hover:underline">Demo</a>
+                        <a href="https://github.com/CadenzaMyFavourite/inventory-backend" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
                     </div>
                 </div>
                 <!-- Project card 2 -->
                 <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-lg font-semibold mb-2">Texas Hold'em Solver</h3>
-                    <p class="text-gray-600 mb-4">Probability engine calculates optimal poker decisions.</p>
+                    <h3 class="text-lg font-semibold mb-2">AI Consulting Platform</h3>
+                    <ul class="list-disc ml-5 text-gray-600 mb-4">
+                        <li>FastAPI service converting business data into strategic insights.</li>
+                        <li>Streamlit dashboards and extensible multi-client architecture.</li>
+                        <li>Data cleaning, feature extraction, automated strategy pipelines.</li>
+                    </ul>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
-                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Probability</span>
-                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Simulation</span>
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/CadenzaMyFavourite/holdem-solver" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://demo.example.com" target="_blank" class="text-blue-600 hover:underline">Demo</a>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">FastAPI</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Qwen LLM</span>
                     </div>
                 </div>
                 <!-- Project card 3 -->
                 <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-lg font-semibold mb-2">Course Planner AI</h3>
-                    <p class="text-gray-600 mb-4">Optimizes Waterloo course selection using graph algorithms.</p>
+                    <h3 class="text-lg font-semibold mb-2">Stock Market Prediction</h3>
+                    <ul class="list-disc ml-5 text-gray-600 mb-4">
+                        <li>Full ML pipeline predicting S&P500 outperformance.</li>
+                        <li>Data ingestion from Yahoo Finance, feature engineering, backtesting.</li>
+                        <li>Random Forest models trained in pandas/scikit-learn.</li>
+                    </ul>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
-                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Algorithms</span>
-                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">AI</span>
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/CadenzaMyFavourite/course-planner" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://demo.example.com" target="_blank" class="text-blue-600 hover:underline">Demo</a>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">scikit-learn</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Pandas</span>
                     </div>
                 </div>
             </div>
@@ -138,32 +149,31 @@
             <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Technical Skills</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:animate-spin-slow" data-aos="fade-up">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">Languages</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">Programming</h3>
                     <ul class="space-y-2 text-gray-700">
-                        <li>Python</li>
+                        <li>Python (Advanced)</li>
+                        <li>TypeScript</li>
                         <li>Java</li>
-                        <li>C</li>
-                        <li>Racket</li>
+                        <li>C++</li>
                         <li>SQL</li>
-                        <li>JavaScript</li>
                     </ul>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:animate-spin-slow" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">AI / Data</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">AI Systems</h3>
                     <ul class="space-y-2 text-gray-700">
-                        <li>Machine Learning</li>
-                        <li>Large Language Models</li>
-                        <li>Probability & Statistics</li>
-                        <li>Data Analysis</li>
+                        <li>LLMs (OpenAI, Azure)</li>
+                        <li>LangChain / LangGraph</li>
+                        <li>RAG pipelines & agents</li>
+                        <li>Prompt engineering</li>
                     </ul>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:animate-spin-slow" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">Systems</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">Backend & Data Infra</h3>
                     <ul class="space-y-2 text-gray-700">
-                        <li>Unix/Linux</li>
-                        <li>Git</li>
-                        <li>Bash</li>
-                        <li>Docker</li>
+                        <li>FastAPI, Flask, REST API design</li>
+                        <li>Async programming & service architecture</li>
+                        <li>PostgreSQL, schema design, query optimization</li>
+                        <li>Vector DBs (Chroma, Pinecone), embedding pipelines</li>
                     </ul>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:animate-spin-slow" data-aos="fade-up" data-aos-delay="300">
@@ -177,13 +187,24 @@
             </div>
         </section>
         
+        <section id="awards" class="page-section hidden transition-opacity duration-300 reveal">
+            <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Awards & Recognition</h2>
+            <ul class="list-disc ml-5 text-gray-700 space-y-2">
+                <li>Dean's List, University of Waterloo (2023)</li>
+                <li>UW Computing Excellence Award</li>
+                <li>First place – Hackathon XYZ (2022)</li>
+            </ul>
+        </section>
+        
         <section id="about" class="page-section hidden transition-opacity duration-300 reveal">
             <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">About</h2>
-            <p class="text-gray-700 leading-relaxed max-w-xl">
-                I&rsquo;m Jackie Zou, a computer science student at the University of Waterloo with a deep interest in artificial intelligence,
-                cognitive science, and the design of complex decision systems. When I&rsquo;m not writing code, I enjoy exploring new statistical
-                frameworks and thinking about how theory can inform practical tools.
-            </p>
+            <div class="text-gray-700 leading-relaxed max-w-xl space-y-2">
+                <p>AI Backend Engineer focused on production-grade LLM systems, RAG pipelines, and scalable Python services.</p>
+                <ul class="list-disc ml-5">
+                    <li>FastAPI microservices, vector DBs, LangChain/LangGraph agent workflows.</li>
+                    <li>UW honours CS student with multiple co-op terms building backend platforms.</li>
+                </ul>
+            </div>
         </section>
 
         <section id="resume" class="page-section hidden transition-opacity duration-300 reveal">
