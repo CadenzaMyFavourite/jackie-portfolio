@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jackie Zou | Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- AOS animation library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+</head>
+<body class="text-gray-900 antialiased min-h-screen flex flex-col items-center p-6 sm:p-12">
+
+    <div class="w-full max-w-4xl">
+
+        <nav class="sticky top-0 bg-white z-50 flex justify-between items-center mb-12 shadow-sm">
+            <div class="text-xl font-bold tracking-tight cursor-pointer" onclick="showSection('hero')">Jackie Zou</div>
+            <!-- hamburger for mobile -->
+            <button id="nav-toggle" class="sm:hidden focus:outline-none">
+                <!-- simple bars icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div id="nav-links" class="hidden sm:flex space-x-6 text-sm font-medium text-gray-500">
+                <a href="#hero" data-section="hero" onclick="showSection('hero')" class="nav-link hover:text-blue-600 transition-colors">Home</a>
+                <a href="#projects" data-section="projects" onclick="showSection('projects')" class="nav-link hover:text-blue-600 transition-colors">Projects</a>
+                <a href="#skills" data-section="skills" onclick="showSection('skills')" class="nav-link hover:text-blue-600 transition-colors">Skills</a>
+                <a href="#about" data-section="about" onclick="showSection('about')" class="nav-link hover:text-blue-600 transition-colors">About</a>
+                <a href="#resume" data-section="resume" onclick="showSection('resume')" class="nav-link hover:text-blue-600 transition-colors">Resume</a>
+                <a href="#contact" data-section="contact" onclick="showSection('contact')" class="nav-link hover:text-blue-600 transition-colors">Contact</a>
+                <button id="theme-toggle" title="Toggle dark mode" class="ml-4 text-lg">🌙</button>
+            </div>
+        </nav>
+
+        <section id="hero" class="page-section block transition-opacity duration-300 reveal" data-aos="fade-up">
+            <!-- navigation blocks grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
+                <!-- About block -->
+                <div onclick="showSection('about')" class="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out">
+                    <!-- about icon -->
+                    <svg class="w-10 h-10 mb-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 15c2.81 0 5.393.875 7.879 2.804M12 11a4 4 0 100-8 4 4 0 000 8z" />
+                    </svg>
+                    <h3 class="text-3xl font-bold mb-2">About</h3>
+                    <p class="text-gray-600">Learn who I am, my interests and background.</p>
+                </div>
+                <!-- Projects block -->
+                <div onclick="showSection('projects')" class="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out">
+                    <!-- projects icon -->
+                    <svg class="w-10 h-10 mb-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6M3 7h18M3 17h18" />
+                    </svg>
+                    <h3 class="text-3xl font-bold mb-2">Projects</h3>
+                    <p class="text-gray-600">Explore software projects including AI tools and probability engines.</p>
+                </div>
+                <!-- Skills block -->
+                <div onclick="showSection('skills')" class="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out">
+                    <!-- skills icon -->
+                    <svg class="w-10 h-10 mb-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3v4l-4 4h14l-4-4v-4c0-1.657-1.343-3-3-3z" />
+                    </svg>
+                    <h3 class="text-3xl font-bold mb-2">Skills</h3>
+                    <p class="text-gray-600">View my technical skill set and competencies.</p>
+                </div>
+                <!-- Resume block -->
+                <div onclick="showSection('resume')" class="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out">
+                    <!-- resume icon -->
+                    <svg class="w-10 h-10 mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v.01M16 8h-4l-2 4v6h8v-6l-2-4z" />
+                    </svg>
+                    <h3 class="text-3xl font-bold mb-2">Resume</h3>
+                    <p class="text-gray-600">View my professional experience and download my CV.</p>
+                </div>
+                <!-- Contact block -->
+                <div onclick="showSection('contact')" class="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out">
+                    <!-- contact icon -->
+                    <svg class="w-10 h-10 mb-4 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0l4-4m-4 4l4 4" />
+                    </svg>
+                    <h3 class="text-3xl font-bold mb-2">Contact</h3>
+                    <p class="text-gray-600">Get in touch via email or social links.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="page-section hidden transition-opacity duration-300 reveal">
+            <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> <!-- animate each card -->
+                <!-- Project card 1 -->
+                <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up">
+                    <h3 class="text-lg font-semibold mb-2">AI Consulting Tool</h3>
+                    <p class="text-gray-600 mb-4">LLM‑powered decision assistant built with Qwen models.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">LLM</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">API</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/CadenzaMyFavourite/ai-tool" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://demo.example.com" target="_blank" class="text-blue-600 hover:underline">Demo</a>
+                    </div>
+                </div>
+                <!-- Project card 2 -->
+                <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg font-semibold mb-2">Texas Hold'em Solver</h3>
+                    <p class="text-gray-600 mb-4">Probability engine calculates optimal poker decisions.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Probability</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Simulation</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/CadenzaMyFavourite/holdem-solver" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://demo.example.com" target="_blank" class="text-blue-600 hover:underline">Demo</a>
+                    </div>
+                </div>
+                <!-- Project card 3 -->
+                <div class="project-card bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 reveal" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-semibold mb-2">Course Planner AI</h3>
+                    <p class="text-gray-600 mb-4">Optimizes Waterloo course selection using graph algorithms.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Python</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">Algorithms</span>
+                        <span class="px-2 py-1 bg-gray-200 text-xs rounded">AI</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/CadenzaMyFavourite/course-planner" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://demo.example.com" target="_blank" class="text-blue-600 hover:underline">Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="page-section hidden transition-opacity duration-300 reveal">
+            <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Technical Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:animate-spin-slow" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">Languages</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C</li>
+                        <li>Racket</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:animate-spin-slow" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">AI / Data</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Machine Learning</li>
+                        <li>Large Language Models</li>
+                        <li>Probability & Statistics</li>
+                        <li>Data Analysis</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:animate-spin-slow" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">Systems</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Unix/Linux</li>
+                        <li>Git</li>
+                        <li>Bash</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:animate-spin-slow" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">Frameworks</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>TailwindCSS</li>
+                        <li>PySide6</li>
+                        <li>React (future)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="page-section hidden transition-opacity duration-300 reveal">
+            <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">About</h2>
+            <p class="text-gray-700 leading-relaxed max-w-xl">
+                I&rsquo;m Jackie Zou, a computer science student at the University of Waterloo with a deep interest in artificial intelligence,
+                cognitive science, and the design of complex decision systems. When I&rsquo;m not writing code, I enjoy exploring new statistical
+                frameworks and thinking about how theory can inform practical tools.
+            </p>
+        </section>
+
+        <section id="resume" class="page-section hidden transition-opacity duration-300 reveal">
+            <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Resume</h2>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+                <p class="text-gray-600 mb-6">You can view my full resume below or download a version.</p>
+                <div class="mb-4">
+                    <label for="resume-select" class="sr-only">Resume version</label>
+                    <select id="resume-select" class="border rounded px-3 py-2">
+                        <option value="assets/SOFTWARE_ENGINEERING.pdf">SOFTWARE_ENGINEERING Resume</option>
+                        <option value="assets/AIMachinelearning.pdf">AIMachinelearning Resume</option>
+                    </select>
+                </div>
+                <iframe id="resume-frame" src="assets/SOFTWARE_ENGINEERING.pdf" width="100%" height="600"></iframe>
+                <div class="mt-6">
+                    <a id="resume-download" href="assets/SOFTWARE_ENGINEERING.pdf" target="_blank" class="px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition">Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-section hidden transition-opacity duration-300 reveal">
+            <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Contact</h2>
+            <p class="text-gray-700">Let's work together.</p>
+            <p class="mt-4">Email: <a href="mailto:zjiaqi1214@gmail.com" class="text-blue-600">zjiaqi1214@gmail.com</a></p>
+            <div class="mt-2 space-x-4">
+                <a href="https://github.com/CadenzaMyFavourite" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+                <a href="https://linkedin.com/in/jiaqi-zou-652084382" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
+            </div>
+        </section>
+
+        <footer class="mt-16 border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+            <div class="mb-4 sm:mb-0">&copy; 2026 Jackie Zou. All rights reserved.</div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-gray-900 transition">LinkedIn</a>
+                <a href="#" class="hover:text-gray-900 transition">GitHub</a>
+                <a href="#" class="hover:text-gray-900 transition">Email</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

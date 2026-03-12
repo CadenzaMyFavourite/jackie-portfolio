@@ -1,0 +1,83 @@
+/* global styles for portfolio */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f5;
+    font-size: 1.125rem; /* slightly larger base text */
+}
+
+/* navigational block cards */
+.nav-card {
+    /* inherits from Tailwind classes; space for additional tweaks */
+}
+
+/* spacing between sections */
+.page-section {
+    padding: 4rem 0;
+}
+
+/* reveal-on-scroll helper */
+.reveal {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* project card custom rules (if needed) */
+.project-card {
+    /* tailwind classes used; placeholder for future overrides */
+}
+
+/* dark mode support (optional) */
+.dark body {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+.dark nav {
+    background-color: #2d3748;
+}
+.dark a:hover {
+    color: #63b3ed;
+}
+
+/* nav link active/highlight */
+.nav-link.active {
+    font-weight: 600;
+    color: #1d4ed8; /* blue-700 */
+}
+
+/* slow spin keyframes */
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+
+/* mobile nav open */
+#nav-links.mobile-open {
+    display: block !important;
+}
+/* mobile nav layout */
+@media (max-width: 639px) {
+    #nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+    #nav-links a {
+        margin-bottom: 0.75rem;
+    }
+}
