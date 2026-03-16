@@ -19,12 +19,13 @@ export default function SkillCard({ title, description, items }) {
       viewport={{ once: true, amount: 0.4 }}
       className="w-full"
     >
-      <GlassCard
-        className="cursor-pointer"
-        onClick={() => setExpanded((prev) => !prev)}
-        aria-expanded={expanded}
-      >
-        <div className="flex items-start justify-between gap-4">
+      <GlassCard className="cursor-default">
+        <div
+          className="flex items-start justify-between gap-4 cursor-pointer"
+          role="button"
+          onClick={() => setExpanded((prev) => !prev)}
+          aria-expanded={expanded}
+        >
           <div>
             <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">{title}</h3>
             <p className="text-sm text-slate-600 dark:text-white/80">{description}</p>
