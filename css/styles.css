@@ -8,6 +8,11 @@ body {
     font-size: 1.125rem; /* slightly larger base text */
 }
 
+/* legacy static content (hidden once React is loaded) */
+#legacy-content {
+    display: none;
+}
+
 /* navigational block cards */
 .nav-card {
     /* inherits from Tailwind classes; space for additional tweaks */

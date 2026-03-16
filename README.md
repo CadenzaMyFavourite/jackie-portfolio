@@ -59,3 +59,29 @@ This repository contains a polished single-page developer portfolio for Jackie Z
 ---
 
 This setup replicates the typical stack used by top CS students applying to internships: clean directory layout, Tailwind styling, GitHub integration, and free continuous deployment. Adjust assets and content as you grow the portfolio.
+
+---
+
+## React + Vite Migration (new)
+
+This project now contains a React + Vite setup under `src/` using the existing HTML/CSS/asset design.
+
+### Run locally
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Start dev server:
+   ```sh
+   npm run dev
+   ```
+
+### Key files
+- `src/App.jsx` — main layout and section routing
+- `src/components/` — reusable component library (Navbar, Hero, Projects, etc.)
+- `src/data/` — structured data for projects, skills, and awards
+- `css/styles.css` — preserved original styling (Tailwind + custom rules)
+
+### Notes
+- The legacy `index.html` content is preserved under `#legacy-content` for reference but hidden by CSS.
+- Project cards, skills, awards, and navigation are now rendered from React components.

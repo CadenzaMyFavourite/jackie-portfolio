@@ -4,16 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Jackie Zou | Software Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- AOS animation library -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
 </head>
 <body class="text-gray-900 antialiased min-h-screen flex flex-col items-center p-6 sm:p-12">
 
-    <div class="w-full max-w-4xl">
+    <div id="root"></div>
+
+    <div id="legacy-content" class="w-full max-w-4xl">
 
         <nav class="sticky top-0 bg-white z-50 flex justify-between items-center mb-12 shadow-sm">
             <div class="text-xl font-bold tracking-tight cursor-pointer" onclick="showSection('hero')">Jackie Zou</div>
@@ -274,7 +272,6 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
