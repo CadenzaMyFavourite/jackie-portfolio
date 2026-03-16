@@ -1,88 +1,58 @@
 /* global styles for portfolio */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f4f4f5;
-    font-size: 1.125rem; /* slightly larger base text */
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, rgba(99, 102, 241, 0.15), transparent 55%),
+    radial-gradient(circle at bottom, rgba(16, 185, 129, 0.15), transparent 55%),
+    #020617;
+  color: #f8fafc;
+  font-size: 1.0625rem;
 }
 
-/* legacy static content (hidden once React is loaded) */
-#legacy-content {
-    display: none;
+/* Glassmorphism helpers */
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* navigational block cards */
-.nav-card {
-    /* inherits from Tailwind classes; space for additional tweaks */
-}
-
-/* spacing between sections */
+/* Section spacing */
 .page-section {
-    padding: 4rem 0;
+  padding: 4rem 0;
 }
 
-/* reveal-on-scroll helper */
+/* Reveal-on-scroll (used sparingly) */
 .reveal {
-    opacity: 0;
-    transform: translateY(1.5rem);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* project card custom rules (if needed) */
-.project-card {
-    /* tailwind classes used; placeholder for future overrides */
+/* Utility to keep content centered */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-/* dark mode support (optional) */
+/* Dark mode tweaks */
 .dark body {
-    background-color: #1a202c;
-    color :  #e223af; /* use white text for better contrast */
-}
-.dark nav {
-    background-color: #2d3748;
-}
-.dark a:hover {
-    color: #63b3ed;
+  background: linear-gradient(180deg, rgba(12, 13, 22, 0.9), #020617);
 }
 
-/* nav link active/highlight */
-.nav-link.active {
-    font-weight: 600;
-    color: #1d4ed8; /* blue-700 */
-}
-
-/* slow spin keyframes */
-@keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-.animate-spin-slow {
-    animation: spin-slow 20s linear infinite;
-}
-
-/* mobile nav open */
-#nav-links.mobile-open {
-    display: block !important;
-}
-/* mobile nav layout */
-@media (max-width: 639px) {
-    #nav-links {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: white;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 2rem;
-    }
-    #nav-links a {
-        margin-bottom: 0.75rem;
-    }
+/* Smooth hover transitions */
+a,
+button {
+  transition: all 0.18s ease-out;
 }

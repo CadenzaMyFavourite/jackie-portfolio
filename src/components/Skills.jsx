@@ -1,26 +1,27 @@
 import { skillCategories } from '../data/skills';
+import SkillCard from './SkillCard';
 
 export default function Skills() {
   return (
-    <section id="skills" className="page-section transition-opacity duration-300 reveal">
-      <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-        Technical Skills
-      </h2>
+    <section className="space-y-8">
+      <div>
+        <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          Skills
+        </h2>
+        <p className="text-lg text-white/80 max-w-2xl">
+          A snapshot of the tools, languages, and systems I use to deliver robust, scalable
+          software.
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {skillCategories.map((category) => (
-          <a
+          <SkillCard
             key={category.title}
-            href={category.href}
-            className="block bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:animate-spin-slow no-underline"
-          >
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">{category.title}</h3>
-            <ul className="space-y-2 text-gray-700">
-              {category.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </a>
+            title={category.title}
+            description={category.description}
+            items={category.items}
+          />
         ))}
       </div>
     </section>

@@ -6,7 +6,9 @@ export const projects = [
       'Built RESTful APIs to manage inventory, orders, and user data with transactional guarantees.',
       'Integrated relational databases; debugged and optimized edge‑case/concurrent logic.'
     ],
-    tags: ['Java', 'SQL']
+    tags: ['Java', 'SQL'],
+    github: '',
+    demo: ''
   },
   {
     title: 'AI Consulting Platform – Business Intelligence',
@@ -15,7 +17,9 @@ export const projects = [
       'Automated data cleaning, feature extraction, and strategy generation pipelines.',
       'Interactive Streamlit dashboard for non‑technical users; extensible architecture.'
     ],
-    tags: ['Python', 'FastAPI', 'Streamlit', 'Qwen LLM']
+    tags: ['Python', 'FastAPI', 'Streamlit', 'Qwen LLM'],
+    github: '',
+    demo: ''
   },
   {
     title: 'Automated Code Evaluation Platform',
@@ -24,7 +28,9 @@ export const projects = [
       'Deterministic execution and validation ensuring fairness and reliability.',
       'Implemented persistent storage, access control, and concurrency handling.'
     ],
-    tags: ['Python']
+    tags: ['Python'],
+    github: '',
+    demo: ''
   },
   {
     title: 'Stock Market Outperformance Predictor',
@@ -33,7 +39,9 @@ export const projects = [
       'Ingested/cleaned Yahoo Finance data; engineered financial features via regex parsers.',
       'Trained & validated Random Forest classifier with backtesting.'
     ],
-    tags: ['Java', 'Python', 'Pandas', 'scikit-learn']
+    tags: ['Java', 'Python', 'Pandas', 'scikit-learn'],
+    github: '',
+    demo: ''
   },
   {
     title: 'Research: Cognitive Biases in LLMs',
@@ -42,6 +50,8 @@ export const projects = [
       'Analyzed robustness of outputs; documented implications for production reliability.',
       'Developed reproducible Python systems for data analysis at UW.'
     ],
-    tags: ['Python']
+    tags: ['Python'],
+    github: '',
+    demo: ''
   }
 ];

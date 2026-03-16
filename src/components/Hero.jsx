@@ -11,71 +11,73 @@ import {
 export default function Hero({ onNavigate }) {
   const navCards = [
     {
-      id: 'about',
+      to: '/about',
       title: 'About',
-      description: 'Learn who I am, my interests and background.',
-      icon: <FaUser className="w-10 h-10 mb-4 text-blue-500" />
+      description: 'Learn who I am, my interests, and background.',
+      icon: <FaUser className="w-10 h-10 mb-4 text-blue-300" />
     },
     {
-      id: 'projects',
+      to: '/projects',
       title: 'Projects',
       description:
         'Explore backend systems, AI platforms, automated judges, ML pipelines, and research.',
-      icon: <FaProjectDiagram className="w-10 h-10 mb-4 text-purple-500" />
+      icon: <FaProjectDiagram className="w-10 h-10 mb-4 text-purple-300" />
     },
     {
-      id: 'skills',
+      to: '/skills',
       title: 'Skills',
       description: 'View my technical skill set and competencies.',
-      icon: <FaTools className="w-10 h-10 mb-4 text-green-500" />
+      icon: <FaTools className="w-10 h-10 mb-4 text-green-300" />
     },
     {
-      id: 'awards',
+      to: '/awards',
       title: 'Awards',
       description: 'See contest results, honours, and academic awards.',
-      icon: <FaAward className="w-10 h-10 mb-4 text-indigo-500" />
+      icon: <FaAward className="w-10 h-10 mb-4 text-indigo-300" />
     },
     {
-      id: 'resume',
+      to: '/resume',
       title: 'Resume',
       description: 'View my professional experience and download my CV.',
-      icon: <FaFileAlt className="w-10 h-10 mb-4 text-red-500" />
+      icon: <FaFileAlt className="w-10 h-10 mb-4 text-red-300" />
     },
     {
-      id: 'contact',
+      to: '/about',
       title: 'Contact',
       description: 'Get in touch via email or social links.',
-      icon: <FaEnvelope className="w-10 h-10 mb-4 text-yellow-500" />
+      icon: <FaEnvelope className="w-10 h-10 mb-4 text-yellow-300" />
     }
   ];
 
   return (
-    <section id="hero" className="page-section block transition-opacity duration-300">
-      <div className="mb-8 flex justify-start">
-        <img
-          src="/assets/profile.jpg"
-          alt="Jackie Zou"
-          loading="lazy"
-          className="w-48 h-48 rounded-full object-cover"
-        />
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
-        {navCards.map((card, index) => (
-          <motion.button
-            key={card.id}
-            type="button"
-            onClick={() => onNavigate(card.id)}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.55, delay: index * 0.08 }}
-            className="nav-card cursor-pointer bg-white p-8 rounded-2xl shadow transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-50 duration-300 ease-out text-left"
-          >
-            {card.icon}
-            <h3 className="text-3xl font-bold mb-2">{card.title}</h3>
-            <p className="text-gray-600">{card.description}</p>
-          </motion.button>
-        ))}
+    <section className="relative overflow-hidden rounded-3xl bg-[url('/images/header.jpg')] bg-cover bg-center px-6 py-16 shadow-xl">
+      <div className="absolute inset-0 bg-black/55 backdrop-blur-sm" aria-hidden="true" />
+      <div className="relative mx-auto grid max-w-5xl gap-10">
+        <div className="space-y-4 text-white">
+          <h1 className="text-4xl font-bold sm:text-5xl">Hi, I'm Jackie.</h1>
+          <p className="max-w-2xl text-lg text-white/80">
+            I build backend systems, AI platforms, and tooling that help teams move fast and ship with confidence.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {navCards.map((card, index) => (
+            <motion.button
+              key={card.title}
+              type="button"
+              onClick={() => onNavigate(card.to)}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.5, delay: index * 0.06 }}
+              className="group rounded-2xl border border-white/20 bg-white/10 p-6 text-left shadow-sm backdrop-blur transition hover:border-white/40 hover:bg-white/15"
+            >
+              {card.icon}
+              <h3 className="text-xl font-semibold text-white group-hover:text-white">{card.title}</h3>
+              <p className="mt-2 text-sm text-white/70">{card.description}</p>
+            </motion.button>
+          ))}
+        </div>
       </div>
     </section>
   );
