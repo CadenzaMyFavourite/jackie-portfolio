@@ -42,7 +42,7 @@ export default function Hero({ onNavigate }) {
       icon: <FaFileAlt className="w-10 h-10 mb-4 text-red-300" />
     },
     {
-      to: '/about',
+      to: '/contact',
       title: 'Contact',
       description: 'Get in touch via email or social links.',
       icon: <FaEnvelope className="w-10 h-10 mb-4 text-yellow-300" />

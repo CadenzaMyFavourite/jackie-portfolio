@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Awards from './pages/Awards';
 import Resume from './pages/Resume';
+import Contact from './components/Contact';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/awards" element={<Awards />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<NotFound />} />
         </Route>

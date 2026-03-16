@@ -88,7 +88,7 @@ export default function Contact() {
           </div>
 
           <a
-            href="https://www.google.com/maps/place/Richmond+Hill,+ON"
+            href="https://www.google.com/maps/place/166+Larratt+Ln,+Richmond+Hill,+ON+L4C+0E8,+Canada/@43.8951504,-79.4671002,17z/data=!3m1!4b1!4m6!3m5!1s0x882b2a18cc4f2459:0xd6f91af55d1488e8!8m2!3d43.8951466!4d-79.4645253!16s%2Fg%2F11gty5gcmw?hl=en&entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="group block overflow-hidden rounded-3xl border border-white/15 bg-white/10 shadow-xl backdrop-blur-lg transition hover:-translate-y-1 hover:shadow-2xl"
