@@ -88,15 +88,15 @@ export default function Contact() {
           </div>
 
           <a
-            href="https://www.google.com/maps/place/166+Larratt+Ln,+Richmond+Hill,+ON+L4C+0E8,+Canada/@43.8951504,-79.4671002,17z/data=!3m1!4b1!4m6!3m5!1s0x882b2a18cc4f2459:0xd6f91af55d1488e8!8m2!3d43.8951466!4d-79.4645253!16s%2Fg%2F11gty5gcmw?hl=en&entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D"
+            href="https://www.google.com/maps/search/?api=1&query=166+Larratt+Lane,+Richmond+Hill,+ON"
             target="_blank"
             rel="noopener noreferrer"
             className="group block overflow-hidden rounded-3xl border border-white/15 bg-white/10 shadow-xl backdrop-blur-lg transition hover:-translate-y-1 hover:shadow-2xl"
           >
             <div className="relative h-60 overflow-hidden">
               <iframe
-                title="Richmond Hill, Ontario map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29032.01184517301!2d-79.43532238845088!3d43.88003689261774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b22ad6319845d%3A0x97d0f2d6c1006135!2sRichmond%20Hill%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                title="166 Larratt Lane map"
+                src="https://maps.google.com/maps?q=166%20Larratt%20Lane%2C%20Richmond%20Hill%2C%20ON&output=embed"
                 className="h-full w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -108,7 +108,7 @@ export default function Contact() {
                   <FaMapMarkerAlt className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-white">Richmond Hill, Ontario</p>
+                  <p className="text-sm font-semibold text-white">166 Larratt Lane, Richmond Hill</p>
                   <p className="text-xs text-white/60">Open in Google Maps</p>
                 </div>
               </div>
