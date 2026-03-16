@@ -13,7 +13,7 @@ export default function Resume() {
             </p>
             <iframe
               title="Resume"
-              src="/resume.pdf"
+              src="/SOFTWARE_ENGINEERING.pdf"
               className="w-full h-[600px] rounded-xl border border-white/10"
             />
           </div>
@@ -23,7 +23,7 @@ export default function Resume() {
           <div className="glass-card p-6">
             <p className="text-slate-700 dark:text-white/80 mb-4">Download a copy:</p>
             <a
-              href="/resume.pdf"
+              href="/SOFTWARE_ENGINEERING.pdf"
               download
               className="inline-flex items-center justify-center rounded-lg bg-white/20 px-5 py-3 text-sm font-medium text-slate-900 dark:text-white shadow-sm backdrop-blur transition hover:bg-white/30"
             >
