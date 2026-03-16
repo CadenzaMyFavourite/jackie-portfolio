@@ -8,6 +8,7 @@ import Skills from './pages/Skills';
 import Awards from './pages/Awards';
 import Resume from './pages/Resume';
 import NotFound from './pages/NotFound';
+import { Analytics } from "@vercel/analytics/next";
 
 export default function App() {
   const [theme, setTheme] = useState('light');
