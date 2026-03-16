@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -8,7 +9,6 @@ import Skills from './pages/Skills';
 import Awards from './pages/Awards';
 import Resume from './pages/Resume';
 import NotFound from './pages/NotFound';
-import { Analytics } from "@vercel/analytics/next";
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -43,6 +43,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }

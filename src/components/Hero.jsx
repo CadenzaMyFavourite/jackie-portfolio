@@ -50,9 +50,20 @@ export default function Hero({ onNavigate }) {
   ];
 
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-[url('/images/header.jpg')] bg-cover bg-center px-6 py-16 shadow-xl">
+    <section className="relative overflow-hidden rounded-3xl bg-[url('/images/header.jpg')] bg-cover bg-center px-6 py-16 shadow-xl animated-bg">
       <div className="absolute inset-0 bg-black/55 backdrop-blur-sm" aria-hidden="true" />
-      <div className="relative mx-auto grid max-w-5xl gap-10">
+      <div className="relative z-10 mx-auto grid max-w-5xl gap-10">
+        <div className="flex justify-center">
+          <div className="relative inline-flex items-center justify-center">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-fuchsia-500/40 via-indigo-400/30 to-emerald-300/30 blur-3xl animate-blob" />
+            <img
+              src="/images/profile.jpg"
+              alt="Jackie Zou"
+              className="relative h-44 w-44 rounded-full border-4 border-white/30 object-cover shadow-xl"
+            />
+          </div>
+        </div>
+
         <div className="space-y-4 text-white">
           <h1 className="text-4xl font-bold sm:text-5xl">Hi, I'm Jackie.</h1>
           <p className="max-w-2xl text-lg text-white/80">

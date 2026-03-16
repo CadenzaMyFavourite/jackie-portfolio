@@ -85,3 +85,30 @@ This project now contains a React + Vite setup under `src/` using the existing H
 ### Notes
 - The legacy `index.html` content is preserved under `#legacy-content` for reference but hidden by CSS.
 - Project cards, skills, awards, and navigation are now rendered from React components.
+
+---
+
+## Optional: Vercel Analytics (Page Views)
+
+If you'd like to track page views with Vercel Analytics (works in Vercel deployments):
+
+1. Install the Vercel Analytics package:
+   ```sh
+   npm install @vercel/analytics
+   ```
+2. The app already includes analytics by default in `src/App.jsx`:
+   ```js
+   import { Analytics } from '@vercel/analytics/react';
+   
+   export default function App() {
+     return (
+       <BrowserRouter>
+         {/* ... your routes ... */}
+         <Analytics />
+       </BrowserRouter>
+     );
+   }
+   ```
+3. Deploy & visit your site.
+
+If you don’t see data after 30 seconds, try navigating between pages (browser caching/content blockers can block analytics).
