@@ -42,10 +42,10 @@ export default function Contact() {
     <section id="contact" className="relative mt-16 scroll-mt-24">
       <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Contact
           </h2>
-          <p className="mt-3 text-sm text-white/70 sm:text-base">
+          <p className="mt-3 text-sm text-slate-700 dark:text-white/70 sm:text-base">
             Whether you want to collaborate on a project, chat about AI, or just say hi — here’s how to reach me.
           </p>
         </div>
@@ -68,18 +68,18 @@ export default function Contact() {
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-white">{item.label}</p>
+                    <p className="text-sm font-semibold text-slate-900 dark:text-white">{item.label}</p>
                     {isLink ? (
                       <a
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-1 inline-block text-sm text-white/70 transition hover:text-white"
+                        className="mt-1 inline-block text-sm text-slate-700 dark:text-white/70 transition hover:text-slate-900 dark:hover:text-white"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="mt-1 text-sm text-white/70">{item.value}</p>
+                      <p className="mt-1 text-sm text-slate-700 dark:text-white/70">{item.value}</p>
                     )}
                   </div>
                 </div>
@@ -108,11 +108,11 @@ export default function Contact() {
                   <FaMapMarkerAlt className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-white">166 Larratt Lane, Richmond Hill</p>
-                  <p className="text-xs text-white/60">Open in Google Maps</p>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white">166 Larratt Lane, Richmond Hill</p>
+                  <p className="text-xs text-slate-700 dark:text-white/60">Open in Google Maps</p>
                 </div>
               </div>
-              <span className="text-xs font-medium text-white/50 transition group-hover:text-white">
+              <span className="text-xs font-medium text-slate-700 dark:text-white/50 transition group-hover:text-slate-900 dark:group-hover:text-white">
                 View map
               </span>
             </div>
