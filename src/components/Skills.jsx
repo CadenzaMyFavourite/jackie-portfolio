@@ -8,7 +8,7 @@ export default function Skills() {
         <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
           Skills
         </h2>
-        <p className="text-lg text-white/80 max-w-2xl">
+        <p className="text-lg text-slate-700 dark:text-white/80 max-w-2xl">
           A snapshot of the tools, languages, and systems I use to deliver robust, scalable
           software.
         </p>

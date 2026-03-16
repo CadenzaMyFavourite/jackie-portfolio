@@ -21,11 +21,11 @@ export default function SkillCard({ title, description, items }) {
       >
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
-            <p className="text-sm text-white/80">{description}</p>
+            <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">{title}</h3>
+            <p className="text-sm text-slate-600 dark:text-white/80">{description}</p>
           </div>
           <div
-            className={`text-white/70 transition-transform duration-200 ${
+            className={`text-slate-600 dark:text-white/70 transition-transform duration-200 ${
               expanded ? 'rotate-180' : 'rotate-0'
             }`}
           >
@@ -40,7 +40,7 @@ export default function SkillCard({ title, description, items }) {
             animate={{ opacity: 1, height: 'auto' }}
             className="mt-4"
           >
-            <ul className="list-disc ml-5 space-y-2 text-white/80">
+            <ul className="list-disc ml-5 space-y-2 text-slate-600 dark:text-white/80">
               {items.map((item) => (
                 <li key={item}>{item}</li>
               ))}

@@ -4,7 +4,7 @@ export default function About() {
       <div className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
         About
       </div>
-      <div className="text-gray-700 leading-relaxed max-w-xl space-y-4">
+      <div className="text-gray-700 dark:text-slate-200 leading-relaxed max-w-xl space-y-4">
         <p>
           <strong>1B Computer Science student</strong> at the University of Waterloo with a strong interest in{' '}
           <strong>software engineering</strong>, <strong>systems design</strong>, and building efficient, well-structured software.

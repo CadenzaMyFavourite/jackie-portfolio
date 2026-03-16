@@ -53,9 +53,9 @@ export default function Hero({ onNavigate }) {
     <section className="relative overflow-hidden rounded-3xl bg-[url('/images/header.jpg')] bg-cover bg-center px-6 py-16 shadow-xl">
       <div className="absolute inset-0 bg-black/55 backdrop-blur-sm" aria-hidden="true" />
       <div className="relative mx-auto grid max-w-5xl gap-10">
-        <div className="space-y-4 text-white">
+        <div className="space-y-4 text-slate-900 dark:text-white">
           <h1 className="text-4xl font-bold sm:text-5xl">Hi, I'm Jackie.</h1>
-          <p className="max-w-2xl text-lg text-white/80">
+          <p className="max-w-2xl text-lg text-slate-800 dark:text-white/80">
             I build backend systems, AI platforms, and tooling that help teams move fast and ship with confidence.
           </p>
         </div>
@@ -73,8 +73,8 @@ export default function Hero({ onNavigate }) {
               className="group rounded-2xl border border-white/20 bg-white/10 p-6 text-left shadow-sm backdrop-blur transition hover:border-white/40 hover:bg-white/15"
             >
               {card.icon}
-              <h3 className="text-xl font-semibold text-white group-hover:text-white">{card.title}</h3>
-              <p className="mt-2 text-sm text-white/70">{card.description}</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white group-hover:text-slate-900 dark:group-hover:text-white">{card.title}</h3>
+              <p className="mt-2 text-sm text-slate-700 dark:text-white/70">{card.description}</p>
             </motion.button>
           ))}
         </div>
