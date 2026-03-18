@@ -41,7 +41,7 @@ export default function Projects() {
       setError('');
       try {
         const res = await fetch(
-          `https://api.github.com/users/${encodeURIComponent(GITHUB_CadenzaMyFavourite)}/repos?sort=updated&per_page=50`,
+          `https://api.github.com/users/${encodeURIComponent(GITHUB_USERNAME)}/repos?sort=updated&per_page=50`,
           {
             headers: {
               Accept: 'application/vnd.github+json'
@@ -73,7 +73,7 @@ export default function Projects() {
 
     fetchRepos();
     return () => controller.abort();
-  }, []);
+  }, [GITHUB_USERNAME]);
 
   return (
     <section className="space-y-8">
