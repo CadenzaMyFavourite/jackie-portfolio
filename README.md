@@ -26,6 +26,7 @@ This repository contains a polished single-page developer portfolio for Jackie Z
 
 ## Making it recruiter‑ready
 
+- Set `VITE_GITHUB_USERNAME` in a local `.env` file to auto-sync your GitHub repositories as project cards.
 - Add screenshots / demo links to the project cards in `js/github.js` (or augment with custom data).
 - Consider including GitHub stats widgets (e.g. [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)).
 - Enable dark mode toggler in `js/main.js` if desired.
