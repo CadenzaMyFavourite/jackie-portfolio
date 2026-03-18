@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { projects as fallbackProjects } from '../data/projects';
 import ProjectCard from './ProjectCard';
 
-const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_CadenzaMyFavourite;
+const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_CadenzaMyFavourite || 'CadenzaMyFavourite';
 
 function mapRepoToProject(repo) {
   const tags = [repo.language, ...(repo.topics ?? [])].filter(Boolean);
@@ -27,7 +27,8 @@ export default function Projects() {
 
   const repoSourceLabel = useMemo(() => {
     if (error) return 'Manual list (GitHub sync unavailable)';
-    if (!GITHUB_USERNAME) return 'Manual list (set VITE_GITHUB_CadenzaMyFavourite to enable sync)';
+    if (!import.meta.env.VITE_GITHUB_CadenzaMyFavourite)
+      return 'GitHub repos (using default user; set VITE_GITHUB_CadenzaMyFavourite to override)';
     return 'GitHub repos';
   }, [error]);
 
@@ -61,7 +62,12 @@ export default function Projects() {
           .filter((repo) => !repo.fork)
           .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
-        setRepos(filtered.slice(0, 8).map(mapRepoToProject));
+        if (filtered.length === 0) {
+          setError('No non-fork repos found; showing fallback list.');
+          setRepos(fallbackProjects);
+        } else {
+          setRepos(filtered.slice(0, 8).map(mapRepoToProject));
+        }
       } catch (err) {
         if (err.name === 'AbortError') return;
         console.error(err);
