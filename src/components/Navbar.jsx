@@ -16,21 +16,24 @@ export default function Navbar({ theme, onToggleTheme }) {
 
   return (
     <nav className="glass-nav sticky top-0 z-50 w-full">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="w-full pl-2 pr-4 sm:pl-3 sm:pr-6">
         <div className="flex h-16 items-center justify-between">
-          <NavLink
-            to="/"
-            className="glass-control inline-flex h-11 w-11 items-center justify-center p-1.5 hover:bg-white/80 dark:hover:bg-white/20"
-            onClick={() => setMobileOpen(false)}
-            aria-label="Jackie Zou home"
-          >
-            <img
-              src="/images/jackie-logo-mark.png"
-              alt=""
-              className="h-full w-full object-contain transition dark:invert"
-              aria-hidden="true"
-            />
-          </NavLink>
+          <div className="flex min-w-0 items-center gap-2">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center p-1.5" aria-hidden="true">
+              <img
+                src="/images/jackie-logo-mark.png"
+                alt=""
+                className="h-full w-full object-contain transition dark:invert"
+              />
+            </div>
+            <NavLink
+              to="/"
+              className="truncate text-base font-semibold tracking-tight text-slate-950 transition hover:text-emerald-700 dark:text-white dark:hover:text-emerald-300"
+              onClick={() => setMobileOpen(false)}
+            >
+              Jackie Zou
+            </NavLink>
+          </div>
 
           <div className="hidden items-center gap-1 md:flex">
             {navItems.map((item) => (
