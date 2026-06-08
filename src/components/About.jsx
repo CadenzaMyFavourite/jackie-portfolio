@@ -37,7 +37,7 @@ export default function About() {
             {experiences.map((experience) => (
               <article
                 key={`${experience.company}-${experience.role}`}
-                className="glass-card flex h-full flex-col p-5"
+                className="glass-card interactive-card flex h-full flex-col p-5"
               >
                 <div className="flex-1">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-300">
@@ -64,7 +64,7 @@ export default function About() {
                   {experience.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md border border-slate-200 bg-white/75 px-2.5 py-1 text-xs font-medium text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-white/70"
+                      className="glass-chip px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-white/70"
                     >
                       {tag}
                     </span>
@@ -102,19 +102,19 @@ export default function About() {
         </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-md border border-slate-200 bg-white/70 p-4 dark:border-white/10 dark:bg-white/10">
+          <div className="glass-card interactive-card p-4">
             <p className="text-sm font-semibold text-slate-950 dark:text-white">Looking for</p>
             <p className="mt-1 text-sm leading-6 text-slate-600 dark:text-white/70">
               Backend Engineering, AI Infrastructure, Data Science, Quant Research Tools, Full-Stack Systems
             </p>
           </div>
-          <div className="rounded-md border border-slate-200 bg-white/70 p-4 dark:border-white/10 dark:bg-white/10">
+          <div className="glass-card interactive-card p-4">
             <p className="text-sm font-semibold text-slate-950 dark:text-white">Core focus</p>
             <p className="mt-1 text-sm leading-6 text-slate-600 dark:text-white/70">
               RAG, vector databases, data pipelines, APIs, optimization, ML systems
             </p>
           </div>
-          <div className="rounded-md border border-slate-200 bg-white/70 p-4 dark:border-white/10 dark:bg-white/10">
+          <div className="glass-card interactive-card p-4">
             <p className="text-sm font-semibold text-slate-950 dark:text-white">Working style</p>
             <p className="mt-1 text-sm leading-6 text-slate-600 dark:text-white/70">
               Clarity, correctness, testing, extensibility, system-level thinking

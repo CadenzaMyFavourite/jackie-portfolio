@@ -15,7 +15,7 @@ export default function Navbar({ theme, onToggleTheme }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-white/10 dark:bg-zinc-950/75">
+    <nav className="glass-nav sticky top-0 z-50 w-full">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between">
           <NavLink
@@ -36,7 +36,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                   `rounded-md px-3 py-2 text-sm font-medium transition ${
                     isActive
                       ? 'bg-slate-950 text-white shadow-sm dark:bg-white dark:text-slate-950'
-                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-950 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white'
+                      : 'text-slate-600 hover:bg-white/60 hover:text-slate-950 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white'
                   }`
                 }
               >
@@ -64,7 +64,7 @@ export default function Navbar({ theme, onToggleTheme }) {
               onToggleTheme();
               setMobileOpen(false);
             }}
-            className="hidden items-center justify-center rounded-md border border-slate-300 bg-white/70 px-3 py-2 text-sm font-medium text-slate-700 shadow-sm backdrop-blur transition hover:bg-white hover:text-slate-950 dark:border-white/15 dark:bg-white/10 dark:text-white/70 dark:hover:bg-white/20 dark:hover:text-white md:inline-flex"
+            className="glass-control hidden items-center justify-center px-3 py-2 text-sm font-medium text-slate-700 hover:bg-white/80 hover:text-slate-950 dark:text-white/70 dark:hover:bg-white/20 dark:hover:text-white md:inline-flex"
             title="Toggle theme"
             aria-label="Toggle theme"
           >
@@ -75,14 +75,14 @@ export default function Navbar({ theme, onToggleTheme }) {
             <button
               type="button"
               onClick={onToggleTheme}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-300 bg-white/70 text-slate-700 shadow-sm dark:border-white/15 dark:bg-white/10 dark:text-white/70"
+              className="glass-control inline-flex h-10 w-10 items-center justify-center text-slate-700 dark:text-white/70"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <FaSun className="h-4 w-4" /> : <FaMoon className="h-4 w-4" />}
             </button>
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-300 bg-white/70 text-slate-700 shadow-sm dark:border-white/15 dark:bg-white/10 dark:text-white/70"
+              className="glass-control inline-flex h-10 w-10 items-center justify-center text-slate-700 dark:text-white/70"
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-label="Toggle menu"
               aria-expanded={mobileOpen}
@@ -93,7 +93,7 @@ export default function Navbar({ theme, onToggleTheme }) {
         </div>
 
         {mobileOpen ? (
-          <div className="border-t border-slate-200 py-3 dark:border-white/10 md:hidden">
+          <div className="border-t border-white/50 py-3 dark:border-white/10 md:hidden">
             {[...navItems, { label: 'Resume', to: '/resume' }].map((item) => (
               <NavLink
                 key={item.to}
@@ -103,7 +103,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                   `block rounded-md px-3 py-2 text-sm font-medium transition ${
                     isActive
                       ? 'bg-slate-950 text-white dark:bg-white dark:text-slate-950'
-                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-950 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white'
+                      : 'text-slate-600 hover:bg-white/60 hover:text-slate-950 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white'
                   }`
                 }
               >

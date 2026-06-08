@@ -30,24 +30,24 @@ export default function Resume() {
             <iframe
               title="Resume"
               src="/resume.pdf"
-              className="w-full min-h-[72vh] max-h-[90vh] rounded-md border border-slate-200 dark:border-white/10"
+              className="w-full min-h-[72vh] max-h-[90vh] rounded-2xl border border-white/60 dark:border-white/10"
             />
           </div>
         </div>
 
         <div className="grid gap-4 lg:grid-cols-2">
-          <div className="glass-card p-6">
+          <div className="glass-card interactive-card p-6">
             <p className="mb-4 text-slate-700 dark:text-white/80">Download a copy:</p>
             <a
               href="/resume.pdf"
               download
-              className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white/75 px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+              className="glass-control inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-slate-900 hover:-translate-y-0.5 hover:bg-white/80 dark:text-white dark:hover:bg-white/20"
             >
               Download Resume
             </a>
           </div>
 
-          <div className="glass-card p-6">
+          <div className="glass-card interactive-card p-6">
             <p className="text-slate-700 dark:text-white/80">
               Tip: Use the PDF viewer zoom controls or open in a new tab for a better reading experience.
             </p>

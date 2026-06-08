@@ -60,10 +60,10 @@ export default function Contact() {
             return (
               <div
                 key={item.label}
-                className="group flex items-start gap-4 rounded-md border border-slate-200 bg-white/70 p-5 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-white dark:border-white/10 dark:bg-white/10 dark:hover:bg-white/20"
+                className="glass-card interactive-card group flex items-start gap-4 p-5"
               >
                 <div
-                  className={`flex h-11 w-11 items-center justify-center rounded-md ${item.color} text-white shadow-sm transition group-hover:scale-105`}
+                  className={`flex h-11 w-11 items-center justify-center rounded-xl ${item.color} text-white shadow-sm transition group-hover:scale-105`}
                   aria-hidden="true"
                 >
                   <Icon className="h-5 w-5" />

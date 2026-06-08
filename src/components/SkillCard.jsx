@@ -47,7 +47,7 @@ export default function SkillCard({ title, description, items }) {
           {items.map((item) => (
             <span
               key={item.name}
-              className="rounded-md border border-slate-200 bg-white/75 px-2.5 py-1 text-xs font-medium text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-white/70"
+              className="glass-chip px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-white/70"
             >
               {item.name}
             </span>
@@ -65,11 +65,11 @@ export default function SkillCard({ title, description, items }) {
                 const isActive = activeItem === item.name;
 
                 return (
-                  <li key={item.name} className="rounded-md border border-slate-200 bg-white/65 dark:border-white/10 dark:bg-white/10">
+                  <li key={item.name} className="glass-subcard overflow-hidden">
                     <button
                       type="button"
                       onClick={() => toggleItem(item.name)}
-                      className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm text-slate-950 transition hover:bg-white dark:text-white dark:hover:bg-white/10"
+                      className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm text-slate-950 hover:bg-white/50 dark:text-white dark:hover:bg-white/10"
                     >
                       <span className="font-medium">{item.name}</span>
                       <span

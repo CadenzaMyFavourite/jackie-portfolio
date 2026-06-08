@@ -13,7 +13,7 @@ export default function ProjectCard({ title, role, summary, impact, bullets, tag
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: delay / 1000 }}
-      className="glass-card flex h-full flex-col p-5"
+      className="glass-card interactive-card flex h-full flex-col p-5"
     >
       <div className="flex-1">
         {role ? (
@@ -41,7 +41,7 @@ export default function ProjectCard({ title, role, summary, impact, bullets, tag
         {tags.map((tag) => (
           <span
             key={tag}
-            className="inline-flex items-center rounded-md border border-slate-200 bg-white/70 px-2.5 py-1 text-xs font-medium text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-white/80"
+            className="glass-chip px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-white/80"
           >
             {tag}
           </span>
@@ -65,7 +65,7 @@ export default function ProjectCard({ title, role, summary, impact, bullets, tag
             href={demo}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+            className="glass-control inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-slate-900 hover:-translate-y-0.5 hover:bg-white/80 dark:text-white dark:hover:bg-white/20"
           >
             <FaExternalLinkAlt className="h-3.5 w-3.5" />
             View Live

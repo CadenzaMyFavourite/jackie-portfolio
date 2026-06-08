@@ -10,7 +10,7 @@ export default function NotFound() {
         </p>
         <Link
           to="/"
-          className="mt-8 inline-flex items-center justify-center rounded-full bg-white/20 px-8 py-3 text-sm font-semibold text-slate-900 dark:text-white shadow-sm backdrop-blur transition hover:bg-white/30"
+          className="glass-control mt-8 inline-flex items-center justify-center px-8 py-3 text-sm font-semibold text-slate-900 hover:bg-white/80 dark:text-white dark:hover:bg-white/20"
         >
           Back to home
         </Link>

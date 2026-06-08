@@ -74,11 +74,11 @@ export default function Hero({ onNavigate }) {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="space-y-7"
+          className="min-w-0 space-y-7"
         >
-          <div className="inline-flex items-center gap-2 rounded-md border border-emerald-300/70 bg-emerald-50 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800 dark:border-emerald-400/30 dark:bg-emerald-400/10 dark:text-emerald-200">
-            <FaBriefcase className="h-3.5 w-3.5" />
-            Building AI, data, backend, and quant systems
+          <div className="glass-chip w-full max-w-full gap-2 px-3 py-2 text-xs font-semibold uppercase leading-5 tracking-[0.12em] text-emerald-800 dark:text-emerald-200 sm:w-auto sm:tracking-[0.18em]">
+            <FaBriefcase className="h-3.5 w-3.5 shrink-0" />
+            <span className="min-w-0 whitespace-normal">Building AI, data, backend, and quant systems</span>
           </div>
 
           <div className="space-y-5">
@@ -102,7 +102,7 @@ export default function Hero({ onNavigate }) {
             <button
               type="button"
               onClick={() => onNavigate('/resume')}
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white/75 px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+              className="glass-control inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-slate-900 hover:-translate-y-0.5 hover:bg-white/80 dark:text-white dark:hover:bg-white/20"
             >
               <FaFileAlt className="h-4 w-4" />
               Resume
@@ -111,7 +111,7 @@ export default function Hero({ onNavigate }) {
               href="https://github.com/CadenzaMyFavourite"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white/50 px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+              className="glass-control inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-slate-900 hover:-translate-y-0.5 hover:bg-white/80 dark:text-white dark:hover:bg-white/20"
             >
               <FaGithub className="h-4 w-4" />
               GitHub
@@ -122,7 +122,7 @@ export default function Hero({ onNavigate }) {
             {stats.map((stat) => (
               <div
                 key={stat.value}
-                className="rounded-md border border-slate-200 bg-white/70 p-4 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/10"
+                className="glass-card interactive-card p-4"
               >
                 <p className="text-sm font-semibold text-slate-950 dark:text-white">{stat.value}</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.14em] text-slate-500 dark:text-white/50">
@@ -137,17 +137,17 @@ export default function Hero({ onNavigate }) {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.08 }}
-          className="relative"
+          className="relative min-w-0"
         >
-          <div className="relative overflow-hidden rounded-lg border border-slate-200 bg-slate-950 shadow-2xl dark:border-white/10">
+          <div className="media-glass relative overflow-hidden p-2">
             <img
               src="/images/profile.jpg"
               alt="Jackie Zou"
-              className="aspect-[4/5] w-full object-cover object-center opacity-95"
+              className="aspect-[4/5] w-full rounded-[1.1rem] object-cover object-center opacity-95"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" aria-hidden="true" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
-              <div className="rounded-md border border-white/10 bg-slate-950/90 p-4 text-white shadow-xl backdrop-blur">
+            <div className="absolute inset-2 rounded-[1.1rem] bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" aria-hidden="true" />
+            <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
+              <div className="rounded-2xl border border-white/10 bg-slate-950/80 p-4 text-white shadow-xl backdrop-blur-xl">
                 <div className="mb-3 flex items-center gap-2 text-xs text-white/60">
                   <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
                   <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
@@ -169,9 +169,9 @@ export default function Hero({ onNavigate }) {
         {proofCards.map((card) => (
           <div
             key={card.title}
-            className="rounded-md border border-slate-200 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/10"
+            className="glass-card interactive-card p-5"
           >
-            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-slate-950 text-white dark:bg-white dark:text-slate-950">
+            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 text-white shadow-sm dark:bg-white dark:text-slate-950">
               {card.icon}
             </div>
             <h2 className="text-base font-semibold text-slate-950 dark:text-white">{card.title}</h2>
@@ -196,9 +196,9 @@ export default function Hero({ onNavigate }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              className="group rounded-md border border-slate-200 bg-white/70 p-4 text-left shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-white dark:border-white/10 dark:bg-white/10 dark:hover:border-emerald-300/50 dark:hover:bg-white/20"
+              className="glass-card interactive-card group p-4 text-left"
             >
-              <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-md bg-slate-950 text-white dark:bg-white dark:text-slate-950">
+              <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-slate-950 text-white shadow-sm dark:bg-white dark:text-slate-950">
                 {card.icon}
               </div>
               <h3 className="text-base font-semibold text-slate-950 dark:text-white">{card.title}</h3>

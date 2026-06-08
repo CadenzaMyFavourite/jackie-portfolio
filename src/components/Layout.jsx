@@ -5,7 +5,7 @@ import AnimatedBackground from './AnimatedBackground';
 
 export default function Layout({ theme, onToggleTheme }) {
   return (
-    <div className={`relative min-h-screen overflow-x-hidden ${theme === 'dark' ? 'bg-zinc-950 text-white' : 'bg-stone-50 text-slate-950'}`}>
+    <div className={`site-shell relative isolate min-h-screen overflow-x-hidden ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
       <AnimatedBackground />
 
       <div className="relative z-10 flex min-h-screen flex-col">
