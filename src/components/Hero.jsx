@@ -89,8 +89,7 @@ export default function Hero({ onNavigate }) {
 
           <div className="space-y-5">
             <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-normal text-slate-950 dark:text-white sm:text-5xl lg:text-6xl">
-              Jackie Zou         
-              builds AI infrastructure, data systems, and quantitative research tools.
+              Jackie Zou 
             </h1>
             <p className="max-w-2xl text-base leading-8 text-slate-700 dark:text-white/80 sm:text-lg">
               University of Waterloo Computer Science and Combinatorics & Optimization student focused on RAG systems, backend engineering, data pipelines, optimization, and full-stack tools that turn messy information into usable workflows.
