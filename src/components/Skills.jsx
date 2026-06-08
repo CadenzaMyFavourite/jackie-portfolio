@@ -5,12 +5,14 @@ export default function Skills() {
   return (
     <section className="space-y-8">
       <div>
-        <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-300">
+          Technical stack
+        </p>
+        <h2 className="text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
           Skills
         </h2>
-        <p className="text-lg text-slate-700 dark:text-white/80 max-w-2xl">
-          A snapshot of the tools, languages, and systems I use to deliver robust, scalable
-          software.
+        <p className="mt-3 max-w-2xl text-base leading-7 text-slate-700 dark:text-white/70">
+          A recruiter-friendly snapshot first, with expandable details for technical readers.
         </p>
       </div>
 

@@ -5,10 +5,13 @@ export default function Awards() {
   return (
     <section className="space-y-8">
       <div>
-        <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-300">
+          Recognition
+        </p>
+        <h2 className="text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
           Awards & Recognition
         </h2>
-        <p className="text-lg text-slate-700 dark:text-white/80 max-w-2xl">
+        <p className="mt-3 max-w-2xl text-base leading-7 text-slate-700 dark:text-white/70">
           Highlights of notable awards and recognition received during my studies.
         </p>
       </div>

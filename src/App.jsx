@@ -32,7 +32,7 @@ export default function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
       <Routes>
         <Route element={<Layout theme={theme} onToggleTheme={toggleTheme} />}>
           <Route path="/" element={<Home />} />

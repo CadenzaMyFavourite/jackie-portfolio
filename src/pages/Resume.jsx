@@ -1,8 +1,13 @@
 export default function Resume() {
   return (
     <section className="space-y-8">
-      <div className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-        Resume
+      <div>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-300">
+          Resume
+        </p>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
+          Resume
+        </h1>
       </div>
 
       <div className="space-y-8">
@@ -15,7 +20,7 @@ export default function Resume() {
               href="/resume.pdf"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-white/20 px-5 py-3 text-sm font-medium text-slate-900 dark:text-white shadow-sm backdrop-blur transition hover:bg-white/30"
+              className="inline-flex items-center justify-center rounded-md bg-slate-950 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-white/90"
             >
               Open full screen
             </a>
@@ -25,25 +30,27 @@ export default function Resume() {
             <iframe
               title="Resume"
               src="/resume.pdf"
-              className="w-full min-h-[72vh] max-h-[90vh] rounded-xl border border-white/10"
+              className="w-full min-h-[72vh] max-h-[90vh] rounded-md border border-slate-200 dark:border-white/10"
             />
           </div>
         </div>
 
         <div className="grid gap-4 lg:grid-cols-2">
           <div className="glass-card p-6">
-            <p className="text-slate-700 dark:text-white/80 mb-4">Download a copy:</p>
+            <p className="mb-4 text-slate-700 dark:text-white/80">Download a copy:</p>
             <a
               href="/resume.pdf"
               download
-              className="inline-flex items-center justify-center rounded-lg bg-white/20 px-5 py-3 text-sm font-medium text-slate-900 dark:text-white shadow-sm backdrop-blur transition hover:bg-white/30"
+              className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white/75 px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
             >
               Download Resume
             </a>
           </div>
 
           <div className="glass-card p-6">
-            <p className="text-slate-700 dark:text-white/80">Tip: Use the PDF viewer zoom controls or open in a new tab for a better reading experience.</p>
+            <p className="text-slate-700 dark:text-white/80">
+              Tip: Use the PDF viewer zoom controls or open in a new tab for a better reading experience.
+            </p>
           </div>
         </div>
       </div>

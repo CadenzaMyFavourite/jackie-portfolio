@@ -1,122 +1,91 @@
-import { FaPhoneAlt, FaGithub, FaLinkedin, FaInstagram, FaWeixin, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaRegClock } from 'react-icons/fa';
 
 const contactItems = [
   {
-    label: 'Phone',
-    value: '+1 (437) 430‑3283',
-    href: 'tel:+14374303283',
-    icon: FaPhoneAlt,
-    color: 'from-indigo-500 to-sky-400'
+    label: 'Email',
+    value: 'zjiaqi1214@gmail.com',
+    href: 'mailto:zjiaqi1214@gmail.com',
+    icon: FaEnvelope,
+    color: 'bg-emerald-600'
   },
   {
     label: 'GitHub',
-    value: 'https://github.com/CadenzaMyFavourite',
+    value: 'github.com/CadenzaMyFavourite',
     href: 'https://github.com/CadenzaMyFavourite',
     icon: FaGithub,
-    color: 'from-slate-700 to-slate-500'
+    color: 'bg-slate-950'
   },
   {
     label: 'LinkedIn',
     value: 'linkedin.com/in/jiaqi-zou-652084382',
     href: 'https://www.linkedin.com/in/jiaqi-zou-652084382',
     icon: FaLinkedin,
-    color: 'from-blue-600 to-cyan-500'
+    color: 'bg-blue-700'
   },
   {
-    label: 'Instagram',
-    value: 'jackiezou1214',
-    href: 'https://www.instagram.com/jackiezou1214/',
-    icon: FaInstagram,
-    color: 'from-pink-500 to-fuchsia-500'
+    label: 'Location',
+    value: 'Waterloo / Toronto, ON',
+    icon: FaMapMarkerAlt,
+    color: 'bg-amber-600'
   },
   {
-    label: 'WeChat',
-    value: 'my68320458',
-    icon: FaWeixin,
-    color: 'from-emerald-400 to-teal-500'
+    label: 'Availability',
+    value: 'Open to backend, AI infrastructure, data science, quant tooling, and full-stack roles',
+    icon: FaRegClock,
+    color: 'bg-cyan-700'
   }
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative mt-16 scroll-mt-24">
-      <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+    <section id="contact" className="relative scroll-mt-24 py-8">
+      <div className="mx-auto max-w-5xl">
+        <div className="max-w-3xl">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-300">
             Contact
+          </p>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-4xl">
+            Let us talk about where I can contribute.
           </h2>
-          <p className="mt-3 text-sm text-slate-700 dark:text-white/70 sm:text-base">
-            Whether you want to collaborate on a project, chat about AI, or just say hi — here’s how to reach me.
+          <p className="mt-3 text-base leading-7 text-slate-700 dark:text-white/70">
+            Best path for recruiters: email first, then LinkedIn or GitHub for project context.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-start">
-          <div className="space-y-4">
-            {contactItems.map((item) => {
-              const Icon = item.icon;
-              const isLink = Boolean(item.href);
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {contactItems.map((item) => {
+            const Icon = item.icon;
+            const isLink = Boolean(item.href);
 
-              return (
+            return (
+              <div
+                key={item.label}
+                className="group flex items-start gap-4 rounded-md border border-slate-200 bg-white/70 p-5 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-white dark:border-white/10 dark:bg-white/10 dark:hover:bg-white/20"
+              >
                 <div
-                  key={item.label}
-                  className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-white/10 p-6 shadow-lg backdrop-blur transition hover:-translate-y-1 hover:bg-white/15 hover:shadow-xl"
+                  className={`flex h-11 w-11 items-center justify-center rounded-md ${item.color} text-white shadow-sm transition group-hover:scale-105`}
+                  aria-hidden="true"
                 >
-                  <div
-                    className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${item.color} text-white shadow-sm transition group-hover:scale-105`}
-                    aria-hidden="true"
-                  >
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900 dark:text-white">{item.label}</p>
-                    {isLink ? (
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-1 inline-block text-sm text-slate-700 dark:text-white/70 transition hover:text-slate-900 dark:hover:text-white"
-                      >
-                        {item.value}
-                      </a>
-                    ) : (
-                      <p className="mt-1 text-sm text-slate-700 dark:text-white/70">{item.value}</p>
-                    )}
-                  </div>
+                  <Icon className="h-5 w-5" />
                 </div>
-              );
-            })}
-          </div>
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=166+Larratt+Lane,+Richmond+Hill,+ON"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block overflow-hidden rounded-3xl border border-white/15 bg-white/10 shadow-xl backdrop-blur-lg transition hover:-translate-y-1 hover:shadow-2xl"
-          >
-            <div className="relative h-60 overflow-hidden">
-              <iframe
-                title="166 Larratt Lane map"
-                src="https://maps.google.com/maps?q=166%20Larratt%20Lane%2C%20Richmond%20Hill%2C%20ON&output=embed"
-                className="h-full w-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div className="flex items-center justify-between gap-3 px-6 py-5">
-              <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-sky-400 to-indigo-500 text-white shadow-sm">
-                  <FaMapMarkerAlt className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900 dark:text-white">166 Larratt Lane, Richmond Hill</p>
-                  <p className="text-xs text-slate-700 dark:text-white/60">Open in Google Maps</p>
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-slate-950 dark:text-white">{item.label}</p>
+                  {isLink ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 inline-block break-words text-sm text-slate-700 transition hover:text-slate-950 dark:text-white/70 dark:hover:text-white"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="mt-1 text-sm text-slate-700 dark:text-white/70">{item.value}</p>
+                  )}
                 </div>
               </div>
-              <span className="text-xs font-medium text-slate-700 dark:text-white/50 transition group-hover:text-slate-900 dark:group-hover:text-white">
-                View map
-              </span>
-            </div>
-          </a>
+            );
+          })}
         </div>
       </div>
     </section>

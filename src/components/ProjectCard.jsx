@@ -1,9 +1,11 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
-export default function ProjectCard({ title, bullets, tags, github, demo, delay }) {
+export default function ProjectCard({ title, role, summary, impact, bullets, tags, github, demo, delay }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
+  const details = impact ?? bullets ?? [];
 
   return (
     <motion.div
@@ -11,32 +13,50 @@ export default function ProjectCard({ title, bullets, tags, github, demo, delay 
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: delay / 1000 }}
-      className="glass-card p-6"
+      className="glass-card flex h-full flex-col p-5"
     >
-      <h3 className="text-lg font-semibold mb-3 text-slate-900 dark:text-white">{title}</h3>
-      <ul className="list-disc ml-5 text-slate-700 dark:text-white/80 mb-4">
-        {bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
-        ))}
-      </ul>
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex-1">
+        {role ? (
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-300">
+            {role}
+          </p>
+        ) : null}
+        <h3 className="text-lg font-semibold text-slate-950 dark:text-white">{title}</h3>
+        {summary ? (
+          <p className="mt-3 text-sm leading-6 text-slate-700 dark:text-white/80">{summary}</p>
+        ) : null}
+        {details.length ? (
+          <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-700 dark:text-white/80">
+            {details.map((detail) => (
+              <li key={detail} className="flex gap-2">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" aria-hidden="true" />
+                <span>{detail}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+
+      <div className="mt-5 flex flex-wrap gap-2">
         {tags.map((tag) => (
           <span
             key={tag}
-            className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-slate-700 dark:text-white/80"
+            className="inline-flex items-center rounded-md border border-slate-200 bg-white/70 px-2.5 py-1 text-xs font-medium text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-white/80"
           >
             {tag}
           </span>
         ))}
       </div>
-      <div className="flex flex-wrap gap-3">
+
+      <div className="mt-5 flex flex-wrap gap-3">
         {github ? (
           <a
             href={github}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-lg bg-white/20 px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white shadow-sm backdrop-blur transition hover:bg-white/30"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-slate-950 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-white/90"
           >
+            <FaGithub className="h-4 w-4" />
             View Code
           </a>
         ) : null}
@@ -45,8 +65,9 @@ export default function ProjectCard({ title, bullets, tags, github, demo, delay 
             href={demo}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-lg bg-white/20 px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white shadow-sm backdrop-blur transition hover:bg-white/30"
+            className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
           >
+            <FaExternalLinkAlt className="h-3.5 w-3.5" />
             View Live
           </a>
         ) : null}

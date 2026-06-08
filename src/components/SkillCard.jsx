@@ -11,39 +11,53 @@ export default function SkillCard({ title, description, items }) {
     setActiveItem((prev) => (prev === itemName ? null : itemName));
   };
 
+  const toggleExpanded = () => {
+    setExpanded((prev) => !prev);
+  };
+
   return (
     <motion.div
-      layout
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.4 }}
       className="w-full"
     >
       <GlassCard className="cursor-default">
-        <div
-          className="flex items-start justify-between gap-4 cursor-pointer"
-          role="button"
-          onClick={() => setExpanded((prev) => !prev)}
+        <button
+          type="button"
+          className="flex w-full cursor-pointer items-start justify-between gap-4 rounded-md bg-transparent p-0 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/70"
+          onClick={toggleExpanded}
           aria-expanded={expanded}
         >
           <div>
-            <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">{title}</h3>
-            <p className="text-sm text-slate-600 dark:text-white/80">{description}</p>
+            <h3 className="mb-2 text-xl font-semibold text-slate-950 dark:text-white">{title}</h3>
+            <p className="text-sm leading-6 text-slate-600 dark:text-white/70">{description}</p>
           </div>
           <div
-            className={`text-slate-600 dark:text-white/70 transition-transform duration-200 ${
+            aria-hidden="true"
+            className={`text-slate-600 transition-transform duration-200 dark:text-white/70 ${
               expanded ? 'rotate-180' : 'rotate-0'
             }`}
           >
             <FaChevronDown />
           </div>
+        </button>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {items.map((item) => (
+            <span
+              key={item.name}
+              className="rounded-md border border-slate-200 bg-white/75 px-2.5 py-1 text-xs font-medium text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-white/70"
+            >
+              {item.name}
+            </span>
+          ))}
         </div>
 
         {expanded ? (
           <motion.div
-            layout
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
             className="mt-4"
           >
             <ul className="space-y-3">
@@ -51,15 +65,15 @@ export default function SkillCard({ title, description, items }) {
                 const isActive = activeItem === item.name;
 
                 return (
-                  <li key={item.name} className="rounded-xl border border-white/10 bg-white/10">
+                  <li key={item.name} className="rounded-md border border-slate-200 bg-white/65 dark:border-white/10 dark:bg-white/10">
                     <button
                       type="button"
                       onClick={() => toggleItem(item.name)}
-                      className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm text-slate-900 dark:text-white transition hover:bg-white/20 dark:hover:bg-white/10"
+                      className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm text-slate-950 transition hover:bg-white dark:text-white dark:hover:bg-white/10"
                     >
                       <span className="font-medium">{item.name}</span>
                       <span
-                        className={`text-slate-600 dark:text-white/70 transition-transform duration-200 ${
+                        className={`text-slate-600 transition-transform duration-200 dark:text-white/70 ${
                           isActive ? 'rotate-180' : 'rotate-0'
                         }`}
                       >
@@ -69,10 +83,9 @@ export default function SkillCard({ title, description, items }) {
 
                     {isActive ? (
                       <motion.div
-                        layout
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        className="px-4 pb-4 text-sm text-slate-700 dark:text-white/80"
+                        initial={{ opacity: 0, y: 6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="break-words px-4 pb-4 text-sm leading-6 text-slate-700 dark:text-white/70"
                       >
                         {item.description}
                       </motion.div>
