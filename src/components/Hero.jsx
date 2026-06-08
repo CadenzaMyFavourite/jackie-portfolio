@@ -86,7 +86,7 @@ export default function Hero({ onNavigate }) {
               Jackie Zou builds AI infrastructure, data systems, and quantitative research tools.
             </h1>
             <p className="max-w-2xl text-base leading-8 text-slate-700 dark:text-white/80 sm:text-lg">
-              University of Waterloo Computer Science student focused on RAG systems, backend engineering, data pipelines, optimization, and full-stack tools that turn messy information into usable workflows.
+              University of Waterloo Computer Science and Combinatorics & Optimization student focused on RAG systems, backend engineering, data pipelines, optimization, and full-stack tools that turn messy information into usable workflows.
             </p>
           </div>
 
@@ -155,9 +155,9 @@ export default function Hero({ onNavigate }) {
                   <span className="ml-2 font-mono">jackie.profile</span>
                 </div>
                 <div className="space-y-1.5 font-mono text-xs leading-6 text-emerald-100 sm:text-sm">
-                  <p><span className="text-cyan-300">focus</span>: RAG, data systems, quant research tools</p>
-                  <p><span className="text-cyan-300">stack</span>: APIs, vector DBs, backtests, ML workflows</p>
-                  <p><span className="text-cyan-300">goal</span>: build reliable systems around unclear problems</p>
+                  <p><span className="text-cyan-300">experience</span>: AI automation and full-stack internal tools</p>
+                  <p><span className="text-cyan-300">impact</span>: 50+ users, 10k+ records, 500+ docs</p>
+                  <p><span className="text-cyan-300">workflows</span>: ETL pipelines, knowledge bases, semantic search</p>
                 </div>
               </div>
             </div>

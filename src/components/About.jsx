@@ -13,7 +13,7 @@ export default function About() {
 
         <div className="mt-8 space-y-6 text-base leading-8 text-slate-700 dark:text-white/80">
           <p>
-            Hi, I'm Jackie (Jiaqi) Zou, a Computer Science student at the University of Waterloo with a strong interest in artificial intelligence, backend engineering, data systems, and quantitative research.
+            Hi, I'm Jackie (Jiaqi) Zou, a Computer Science and Combinatorics & Optimization student at the University of Waterloo with a strong interest in artificial intelligence, backend engineering, data systems, and quantitative research.
           </p>
 
           <p>
