@@ -20,10 +20,16 @@ export default function Navbar({ theme, onToggleTheme }) {
         <div className="flex h-16 items-center justify-between">
           <NavLink
             to="/"
-            className="text-base font-semibold tracking-tight text-slate-950 hover:text-emerald-700 dark:text-white dark:hover:text-emerald-300"
+            className="glass-control inline-flex h-11 w-11 items-center justify-center p-1.5 hover:bg-white/80 dark:hover:bg-white/20"
             onClick={() => setMobileOpen(false)}
+            aria-label="Jackie Zou home"
           >
-            Jackie Zou
+            <img
+              src="/images/jackie-logo-mark.png"
+              alt=""
+              className="h-full w-full object-contain transition dark:invert"
+              aria-hidden="true"
+            />
           </NavLink>
 
           <div className="hidden items-center gap-1 md:flex">

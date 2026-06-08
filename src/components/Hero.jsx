@@ -16,6 +16,12 @@ import { experienceHighlights } from '../data/experience';
 export default function Hero({ onNavigate }) {
   const stats = experienceHighlights;
 
+  const experienceSpotlights = [
+    'AI automation and full-stack internal tools',
+    'ETL pipelines, knowledge bases, and semantic search',
+    '50+ users, 10k+ records, and 500+ documents'
+  ];
+
   const proofCards = [
     {
       title: 'AI Infrastructure',
@@ -118,6 +124,30 @@ export default function Hero({ onNavigate }) {
             </a>
           </div>
 
+          <div className="glass-card interactive-card p-5">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-300">
+                  Work experience snapshot
+                </p>
+                <h2 className="mt-2 text-lg font-semibold text-slate-950 dark:text-white">
+                  Practical AI automation, data, and internal tooling impact.
+                </h2>
+              </div>
+              <FaBriefcase className="hidden h-5 w-5 shrink-0 text-emerald-700 dark:text-emerald-300 sm:block" />
+            </div>
+            <div className="mt-4 grid gap-2 sm:grid-cols-3">
+              {experienceSpotlights.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-xl border border-slate-200/80 bg-white/55 px-3 py-2 text-sm leading-6 text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-white/75"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="grid gap-3 sm:grid-cols-3">
             {stats.map((stat) => (
               <div
@@ -145,22 +175,6 @@ export default function Hero({ onNavigate }) {
               alt="Jackie Zou"
               className="aspect-[4/5] w-full rounded-[1.1rem] object-cover object-center opacity-95"
             />
-            <div className="absolute inset-2 rounded-[1.1rem] bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" aria-hidden="true" />
-            <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-              <div className="rounded-2xl border border-white/10 bg-slate-950/80 p-4 text-white shadow-xl backdrop-blur-xl">
-                <div className="mb-3 flex items-center gap-2 text-xs text-white/60">
-                  <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                  <span className="ml-2 font-mono">jackie.profile</span>
-                </div>
-                <div className="space-y-1.5 font-mono text-xs leading-6 text-emerald-100 sm:text-sm">
-                  <p><span className="text-cyan-300">experience</span>: AI automation and full-stack internal tools</p>
-                  <p><span className="text-cyan-300">impact</span>: 50+ users, 10k+ records, 500+ docs</p>
-                  <p><span className="text-cyan-300">workflows</span>: ETL pipelines, knowledge bases, semantic search</p>
-                </div>
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
